@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데건설</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+        @font-face {
+            font-family: 'LotteMartDream';
+            font-style: normal;
+            font-weight: 300;
+            src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+        }
+        html {
+            font-size: 62.5%;
+        }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            font-family: 'LotteMartDream', sans-serif;
+            /* overflow: hidden; */
+        }
+        body{
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../jQuery/script/jquery.mousewheel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        //scroll
+        $(function () {
+                    $("html,body").animate({ "scrollLeft": 0 }, 10)
+                    var scrollEvnt = {
+                        count: 0,
+                        dir: "down",
+                        wait: false,
+                        len: $(".fullsection").length,
+                        scroll: true
+                    }
+                    $(".sidePage").children("ul").children("li").click(function () {
+                        // e.preventDefault();
+                        scrollEvnt.count = $(this).index();
+                        scrollEvnt.scroll = false;
+                        scrollAni();
+                    });
+
+                    $(window).on("mousewheel DOMMouseScroll", function (e) {
+                        scrollEvnt.scroll = true;
+                        if (e.deltaY == -1) {
+                            scrollEvnt.dir = "down";
+                        } else {
+                            scrollEvnt.dir = "up";
+                        }
+
+                        if (scrollEvnt.wait) {
+                            clearTimeout(scrollEvnt.wait);
+                        }
+                        scrollEvnt.wait = setTimeout(function () {
+                            scrollAni();
+                        }, 100);
+        //full3
+                    $(window).on("scroll",function(){
+                        var sct = $(window).scrollLeft()
+                        if(sct<3840){
+                            $("#human").css({"opacity":0})
+                            $("#arrow").css({"opacity":0})
+                            $("#details").css({"opacity":0})
+                        }
+                        if(sct>=3840){
+                            $("#human").css({"left":70+"px","opacity":1})
+                            $("#arrow").css({"left":90+"px","opacity":1})
+                            $("#details").css({"left":90+"px","opacity":1})
+                        }
+                    });
+                    });
+                    function scrollAni() {
+                        if (scrollEvnt.scroll) {
+                            if (scrollEvnt.dir == "down") {
+                                scrollEvnt.count++
+                                if (scrollEvnt.count >= scrollEvnt.len) {
+                                    scrollEvnt.count = scrollEvnt.len - 1
+                                }
+                            } else {
+                                scrollEvnt.count--;
+                                if (scrollEvnt.count < 0) {
+                                    scrollEvnt.count = 0
+                                }
+                            }
+                        }
+                        // console.log(scrollEvnt.count)
+                        var lft = $(".fullsection").eq(scrollEvnt.count).offset().left;
+                        console.log(lft)
+                        $("html,body").animate({ "scrollLeft": lft }, 500)
+                        lightNow()
+                    }
+                    function lightNow() {
+                        $(".sidePage>ul").children("li").eq(scrollEvnt.count)
+                            .addClass("on").siblings().removeClass("on");
+                    }
+                    
+                });
+        
+        //menu
+                $(function(){
+                    $(window).on("scroll",function(){
+                        var sc = $(window).scrollLeft()
+                        if(sc >= 1920 && sc < 7680){
+                            $("nav").addClass("on")
+                        }else if(sc < 1920){
+                            $("nav").removeClass("on")
+                        }
+                    })
+                })       
+
+                
+            
+                var menu = document.querySelector("#menu");
+                var nav = document.querySelector(".sideNav");
+                var num = 0;
+
+                menu.addEventListener("click", function () {
+                    num++;
+                    if (num % 2 == 1) {
+                        nav.style.display = "block"
+                        this.style.transform = "rotate(90deg)"
+                    } else if (num % 2 == 0) {
+                        nav.style.display = "none"
+                        this.style.transform = "rotate(180deg)"
+                    }
+
+            });
+        //full1
+                // $("#video").css({ width: $(window).innerWidth() + "px", height: $(window).innerHeight() + "px" })
+                // $(window).resize(function () {
+                //     $("#video").css({ width: $(window).innerWidth() + "px", height: $(window).innerHeight() + "px" })
+                // });
+                $(function () {
+                    var banner = {
+                        idx: 0,
+                        len: $(".mainBanner").children("li").length,
+                        auto: setInterval(middle, 3000)
+                    }
+                    function middle() {
+                        banner.idx++
+                        if (banner.idx > (banner.len - 1)) {
+                            banner.idx = 0;
+                        }
+                        make();
+                    }
+
+                    function make() {
+                        $(".mainBanner").children("li").eq(banner.idx).fadeIn(500)
+                            .siblings("li").fadeOut(500)
+                    }
+                    
+                    var typingBool = false;
+                    var typingIdx = 0;
+                    var typingTxt = $(".typing-txt").text();
+                        
+                        typingTxt = typingTxt.split("");
+                        if (typingBool == false) {
+                            typingBool = true;
+
+                            var tyInt = setInterval(typing, 80);
+                        }
+
+                        function typing() {
+                            if (typingIdx < typingTxt.length) {
+                                $(".typing").append(typingTxt[typingIdx]);
+                                typingIdx++;
+                            } else {
+                                clearInterval(tyInt);
+                            }
+                        }
+                    
+                })
+
+        //full2
+                $(".outer").mouseenter(function () {
+                    $(this).addClass("on").siblings().removeClass("on");
+                    $("")
+                });
+                $(".outer").mouseleave(function () {
+                    $(".outer").removeClass("on");
+                });
+
+        //full4
+                
+        $(function(){
+            $(".next").click(function(){
+                $(".bannerList").stop(true,true).animate({"left":"-50%"},800,function(){
+
+                    var _this = $(this);
+                    $(".bannerList").children().first().appendTo(_this);
+                    _this.css("left",0)
+                });
+            });
+            $(".prev").click(function(){
+                var bannerUl = $(".bannerList");
+
+                bannerUl.children().last().prependTo(bannerUl);
+                bannerUl.css("left","-50%");
+                bannerUl.stop(false, false).animate({"left":0},800)
+            });
+        });
+        
+        //full5
+        
+        //alret
+        $(".alert").click(function(){
+            alert("준비중입니다.")
+        })
+        });
+    </script>
+</head>
+<body oncontextmenu="return false" ondragstart="return flase" onselectstart="return flase">
+    <header>
+        <div>
+            <h1><a href="http://ttove.dothome.co.kr/Lotte/index.html#"><img src="imgs/logo.png" alt="로고이미지"></a></h1>
+            <nav>
+                <img src="imgs/menu.png" alt="메뉴" id="menu">
+                <div class="sideNav">
+                    <ul>
+                        <li>
+                            <a>회사소개</a>
+                            <ul>
+                                <li><a href="http://ttove.dothome.co.kr/Lotte/sub1.html#">주요연혁</a></li>
+                                <li><a class="alert">롯데건설 60년사</a></li>
+                                <li><a class="alert">CEO 인사말</a></li>
+                                <li><a class="alert">비전 및 수상현황</a></li>
+                                <li><a class="alert">조직도</a></li>
+                                <li><a class="alert">해외지사</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>주요사업</a>
+                            <ul>
+                                <li><a class="alert">주택사업</a></li>
+                                <li><a class="alert">건축사업</a></li>
+                                <li><a class="alert">토목사업</a></li>
+                                <li><a class="alert">플랜트사업</a></li>
+                                <li><a class="alert">해외사업</a></li>
+                                <li><a class="alert">사업별 실적 검색</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>기술혁신</a>
+                            <ul>
+                                <li><a class="alert">기술연구원 소개</a></li>
+                                <li><a class="alert">초고층기술</a></li>
+                                <li><a class="alert">친환경 녹색기술</a></li>
+                                <li><a class="alert">미래인프라기술</a></li>
+                                <li><a class="alert">플랜트기술</a></li>
+                                <li><a class="alert">보유지식재산권</a></li>
+                                <li><a class="alert">보유인증서</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>지속가능경영</a>
+                            <ul>
+                                <li><a class="alert">컴플라이언스</a></li>
+                                <li><a class="alert">인진경영</a></li>
+                                <li><a class="alert">환경경영</a></li>
+                                <li><a class="alert">윤리경영</a></li>
+                                <li><a class="alert">사회공헌</a></li>
+                                <li><a class="alert">동반성장</a></li>
+                                <li><a class="alert">지속가능경영보고서</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>홍보센터</a>
+                            <ul>
+                                <li><a class="alert">롯데건설소식</a></li>
+                                <li><a class="alert">롯데월드타워</a></li>
+                                <li><a class="alert">홍보자료</a></li>
+                                <li><a class="alert">CI/ BI 소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>인재채용</a>
+                            <ul>
+                                <li><a class="alert">채용안내</a></li>
+                                <li><a class="alert">채용지원현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>고객센터</a>
+                            <ul>
+                                <li><a class="alert">자주하는질문</a></li>
+                                <li><a class="alert">문의/ 신문고</a></li>
+                                <li><a class="alert">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <aside class="sidePage">
+            <ul>
+                <li class="on">COMPANY</li>
+                <li>BUSINESS</li>
+                <li>RECRUITMEN</li>
+                <li>ISSUE</li>
+                <li>TACHNOLOGY</li>
+            </ul>
+        </aside>
+    </header>
+    <main>
+        <div class="fullsection full1">
+            <p class="typing-txt">고객에게는 보다 나은 가치를 제공하고, 지역사회의 지속가능한 성장에 기여하는 기업시민으로서의 소임을 다 할 것을 약속드립니다.</p>
+            <p class="typing"></p>
+            <aside>
+                <div>
+                    <ul class="mainBanner">
+                        <li class="on"><a><img src="imgs/full1_bg.png" alt="메인배너1"></a></li>
+                        <li><a><img src="imgs/full1_bg.png" alt="메인배너2"></a></li>
+                        <li><a><img src="imgs/full1_bg3.png" alt="메인배너3"></a></li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- <iframe id="video" src="https://www.youtube.com/embed/7WltnQN-4I4?ps=blogger&showinfo=0&controls=0&iv_load_policy=3&rel=0&autoplay=1&fs=0" 
+            frameborder="0" allowfullscreen></iframe> -->
+            <!-- <iframe id="video" src="https://www.youtube.com/embed/7WltnQN-4I4" autoplay=1 showinfo=0 frameborder="0"></iframe> -->
+        </div>
+        <div class="fullsection full2">
+            <h1><span>LOTTE</span> E&C / BUSINESS</h1>
+            <div>
+                <section class="outer">
+                    <h2>HOUSING</h2>
+                    <img src="imgs/business11.png" alt="배경이미지">
+                    <div>
+                        <p>주택사업</p>
+                        <p>다양한 주택사업으로 진정</br>고품격 주거를 보여주고 있습니다.</p>
+                        <p>롯데건설은 다양한 주택사업을 통해 진정한 고품격 주거에 대한</br> 기준을 보여주고 있으며,
+                            특히 ‘롯데캐슬’은 최고의 고객 선호도로</br> 각종 브랜드 대상을 수상하였습니다.</p>
+                        <a><img src="imgs/arrow.png"></a>
+                    </div>
+                </section>
+                <section class="outer">
+                    <h2>CONSTRUCT</h2>
+                    <img src="imgs/business12.png" alt="배경이미지">
+                    <div>
+                        <p>건축사업</p>
+                        <p>첨단의 기술력으로 초고층 건축물을</br>국내 최초로 건설하고 있습니다.</p>
+                        <p>롯데건설은 절대한계가치에 도전하는 첨단의 기술력으로</br> 현대건설기술의 집합체인 초고층건축물을 국내에서는</br> 최초로 건설하고 있습니다.</p>
+                        <a><img src="imgs/arrow.png"></a>
+                    </div>
+                </section>
+                <section class="outer">
+                    <h2>CIVIL WORKS</h2>
+                    <img src="imgs/business13.png" alt="배경이미지">
+                    <div>
+                        <p>토목사업</p>
+                        <p>성공프로젝트를 토대로 해외시장 확대,</br>신가치 창출에 주력할 것입니다.</p>
+                        <p>롯데건설은 선진화된 기술과 품질로 수행한 성공적 프로젝트의</br> 경험을 토대로 해외시장 확대 및 신가치 창출에 주력할 것입니다.</p>
+                        <a><img src="imgs/arrow.png"></a>
+                    </div>
+                </section>
+                <section class="outer">
+                    <h2>PLANT</h2>
+                    <img src="imgs/business14.png" alt="배경이미지">
+                    <div>
+                        <p>플랜트사업</p>
+                        <p>탄탄한 플랜트 건설기술로</br>다양한 실적을 보유하고 있습니다.</p>
+                        <p>롯데건설은 탄탄한 플랜트 건설기술을 쌓아오면서</br> 국내의 모든 분야에 다양한 실적을 보유하고 있습니다.</p>
+                        <a><img src="imgs/arrow.png"></a>
+                    </div>
+                </section>
+                <section class="outer">
+                    <h2>OVERSEAS</h2>
+                    <img src="imgs/business15.png" alt="배경이미지">
+                    <div>
+                        <p>해외사업</p>
+                        <p>더 넓고, 더 밝은 세상을 향해</br>롯데건설은 오늘도 멈추지 않을 것입니다.</p>
+                        <p>더 넓고, 더 밝은 세상을 향한 롯데건설의 끊임없는 도전은</br> 글로벌 시대의 개척자로서 21세기 롯데건설의 새로운 비전을</br> 달성하기 위해 오늘도 멈추지 않을 것입니다.</p>
+                        <a><img src="imgs/arrow.png"></a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="fullsection full3">
+            <img src="imgs/full3_bg1.png" id="back">
+            <p id="human"><span>롯데건설</span>과 함께 발전 할 </br>인재를 기다립니다.</p>
+            <a><img src="imgs/arrow.png" id="arrow"></a>
+            <p id="details">롯데건설 채용공고</p>
+        </div>
+
+        <div class="fullsection full4">
+            <h1><span>LOTTE</span> E&C / NEWS</h1>
+            <p>롯데건설의 새로운 소식</p>
+            <div id="bannerBox">
+                <ul class="bannerList">
+                    <li class="ban01">
+                        <div><img src="imgs/logo_2.png"></div>
+                        <p>롯데건설, 2020년도 시공VE </br>경진대회 최우수상 수상</p>
+                        <time datetime="2020-12-03">2020-12-03</time>
+                        <p>▣ LH에서 주관한 시공VE 경진대회</br> 건설관리개선 분야에서 건설 플랫폼 ‘엘로세움’ </br>
+                            선보여 롯데건설[대표이사 하석주]은...</p>
+                        <a>자세히보기</a>
+                    </li>
+                    <li class="ban02">
+                        <div><img src="imgs/logo_2.png"></div>
+                        <p>롯데건설, 2020년 </br>품질경영대상 수상</p>
+                        <time datetime="2020-11-30">2020-11-30</time>
+                        <p>▣ 청량리 제4구역 도시환경 정비사업 </br> 현장 품질관리체계 인정 받아 롯데건설 </br>
+                            청량리 4구역 주택재개발 여정구 현장...</p>
+                        <a>자세히보기</a>
+                    </li>
+                    <li class="ban03">
+                        <div><img src="imgs/logo_2.png"></div>
+                        <p>롯데건설, ‘오산 롯데캐슬 스카이파크’</br> 27일 사이버 견본주택 개관</p>
+                        <time datetime="2020-11-27">2020-11-27</time>
+                        <p>▣ 전용면적 65~173㎡, 총 2,339세대 규모의</br> 매머드급 대단지로 조성 지역</br>
+                            내 최대 규모 커뮤니티 시설 구성 및 전 세...</p>
+                        <a>자세히보기</a>
+                    </li>
+                    <li class="ban04">
+                        <div><img src="imgs/logo_2.png"></div>
+                        <p>롯데건설, 2020 굿디자인</br> 어워드 국가기술표준원장상 수상</p>
+                        <time datetime="2020-11-20">2020-11-20</time>
+                        <p>▣ ‘DMC 롯데캐슬 더퍼스트’의 공공보행통로</br> 디자인으로 국가기술표준원장상 수상...</p>
+                        <a>자세히보기</a>
+                    </li>
+                    <li class="ban05">
+                        <div><img src="imgs/logo_2.png"></div>
+                        <p>롯데건설-연세대, 스팟[SPOT]을 활용한 </br>대용량 건설 현장 데이터 플랫폼 공동연구</p>
+                        <time datetime="2020-11-19">2020-11-19</time>
+                        <p>▣ 컨워스社의 엣지클라우드 시스템[B-Eagle] 기반,</br> 대용량 데이터 처리 및 공유 플랫폼 공동연구...</p>
+                        <a>자세히보기</a>
+                    </li>
+                    <li class="ban06">
+                        <div><img src="imgs/logo_2.png"></div>
+                        <p>롯데건설, 한국콘크리트학회 </br>학회상 2년 연속 수상</p>
+                        <time datetime="2020-11-04">2020-11-04</time>
+                        <p>▣ 세종 레이캐슬 G&R 클럽하우스 시공 우수성 인정 받아 수상</br> 롯데건설[대표이사 하석주]이 지난 11월 3일...</p>
+                        <a>자세히보기</a>
+                    </li>
+                </ul>
+            </div>
+            <img src="imgs/prev.png" class="prev">
+            <img src="imgs/next.png" class="next">
+        </div>
+        
+        <div class="fullsection full5">
+            <h1><span>LOTTE</span> Tachnology</h1>
+            <!-- <div class="top"></div>
+            <div class="bottom"></div> -->
+            <p>지금까지의 풍부한 건설경험과 사업관리능력을 바탕으로,초고층 복합빌딩과 초장대 교량,</br> 
+                고부가가치 CM/PM 등 미래 건설산업의 핵심 요소 기술을 확보하고 있으며,</br>
+                저탄소 녹색성장을 위한 친환경기술을 개발하여 고부가가치 미래 건설사업의 새로운 지평을 열어가고 있습니다.</p>
+            <img src="imgs/full5_lft.png">
+                <!-- <iframe width="939" height="840" src="https://www.youtube.com/embed/-3XRPtQ6tqw?ps=blogger&showinfo=0&controls=0&iv_load_policy=3&rel=0&autoplay=1&fs=0"></iframe> -->
+            <section>
+                <ul>
+                    <li>
+                        <div>
+                            <h2>초고층 기술</h2>
+                            <p>롯데건설은 혁신과 열정으로</br> 초고층 시장을 선도하고 있습니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h2>친환경 녹색기술</h2>
+                            <p>롯데건설은 인간과 자연을 생각하는 친환경</br> 기술개발에 심혈을 기울이고 있습니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h2>미래인프라기술</h2>
+                            <p>롯데건설은 더 안전하고, 더 우수한</br> 미래인프라사업 핵심기술 개발을 위해</br> 멈추지 않겠습니다. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h2>플랜트 기술</h2>
+                            <p>롯데건설은 플랜트 산업의</br> 새로운 성장동력 발굴에 앞장서겠습니다.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>    
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

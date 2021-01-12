@@ -1,0 +1,80 @@
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 600;
+    background: #fff;
+    border-bottom: .1rem solid #d0d0d0;
+}
+header>div{
+    width: 180rem;
+    height: 8rem;
+    margin: 0 auto;
+    padding-top: .5rem;
+}
+header>div>h1{
+    float: left;
+    margin: .5rem 10rem;
+}
+header>div>nav{
+    margin-top: 2.5rem;
+}
+header>div>nav>img{
+    display: none;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 500;
+}
+header>div>nav>div>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    font-weight: bold;
+}
+header>div>nav>div>ul>li{
+    position: relative;
+    cursor: default;
+}
+header>div>nav>div>ul>li>a{
+    display: block;
+    width: 22rem;
+    height: 5rem;
+    font-size: 1.8rem;
+    line-height: 3.6rem;
+    color: #666;
+    text-align: center;
+}
+header>div>nav>div>ul>li:hover>a{
+    transform: scale(1.2,1.2);
+    transition: all .3s ease;
+}
+header>div>nav>div>ul>li>ul{
+    display: none;
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    text-align: center;
+    background: #ffffffec;
+    border-top: 0.3rem solid #da291c;
+}
+header>div>nav>div>ul:hover>li>ul{
+    display: block;
+}
+header>div>nav>div>ul>li>ul>li{
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 4.2rem;
+    cursor: default;
+}
+header>div>nav>div>ul>li>ul>li>a{
+    color: #6c6c6c;
+    width: 30rem;
+}
+header>div>nav>div>ul>li>ul>li>a:hover{
+    color: #da291c;
+}
