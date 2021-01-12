@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="tit"><a href="#">객체1</a></h1>
+    <script>
+        //document객체
+        //javascript가 document를 읽는 순간까지 html문서 내의 요소,속성 등 html에 관련된 사항들을 모두 속성으로 저장한다.
+        
+        //요소를 속성으로 document객체는 자신의 속성으로 어딘가에 저장을 하고 그 요소를 가져올 수 있는 메소드를 제공한다.
+        //document.getElementsById("html요소 아아디") : id에 해당하는 요소 return
+        //document.getElementsByClassName("html요소 아아디") : class에 해당하는 요소 return
+        //document.getElementsByTagName("html요소 아아디") : tag에 해당하는 요소 return
+        //document.querySelector("#id||.class||tag")
+        var h_1 = document.getElementById("tit");
+        //event type: click, dbclick, mouseleve, mouseenter, mousehover, wheel, mousedown, mouseup, auxclick,...
+        h_1.addEventListener("click",function(){
+            this.style.fontSize = "12px";
+            this.style.border = "1px solid red";
+            this.firstChild.style.color="red";
+        });
+       
+    </script>
+    <h2>객체2</h2>
+    <p id="img"><img src="imgs/1.jpg" alt="눈"></p>
+    <!--p또는 img를 클릭했을 때 이미지 요소가 바뀌도록 javascript를 작성하시오.-->
+    <script>
+        /*
+        var bool = true;
+        var snow = document.querySelector("#img");
+        snow.firstChild.addEventListener("click",function(){
+            
+            if(bool){
+                this.src="imgs/2.jpg";
+                bool = false;
+            }else{
+                this.src="imgs/1.jpg";
+                bool = true;
+            }
+
+        })
+        */
+        var snow = document.getElementById("img");
+        snow.firstChild.addEventListener("mouseenter",function(){
+            this.src="imgs/2.jpg";
+        })
+        snow.firstChild.addEventListener("mouseleave",function(){
+            this.src="imgs/1.jpg";
+        })
+    </script>
+</body>
+</html>

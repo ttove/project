@@ -1,0 +1,88 @@
+html.open {
+    overflow: hidden;
+    position: relative;
+}
+header.mobile>div{
+    position: fixed;
+    z-index: 100;
+}
+header h1{
+    display: none;
+}
+.btn {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-image: url("../imgs/menu_btnw.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+#menu>.close {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("../imgs/close_btn.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+#menu {
+    width: 25rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -25.2rem;
+    z-index: 10;
+    background-color: white;
+    text-align: center;
+    transition: All .8s ease;
+    -webkit-transition: All .8s ease;
+    -moz-transition: All .8s ease;
+    -o-transition: All .8s ease;
+}
+#menu.open {
+    left: 0;
+}
+
+.page_cover.open {
+    display: block;
+}
+
+.page_cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 4;
+    display: none;
+}
+
+
+header.mobile>div>div#menu>nav>ul{
+    margin-top: 10rem;
+}
+header.mobile>div>div#menu>nav>ul>li{
+    padding: 3rem 0;
+    font-size: 1.8rem;
+}
+header.mobile>div>div#menu>nav>ul>li:hover{
+    transition: all .5s ease;
+    transform: scale(1.2,1.2);
+    font-weight: 800;
+    color: #121f44;
+}
+header.mobile>div>div#menu>nav>ul>li>ul{
+    display: none;
+}

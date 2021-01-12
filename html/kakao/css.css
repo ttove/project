@@ -1,0 +1,61 @@
+section {
+    min-width: 320px;
+    min-height: 480px;
+    background: #a0c1d7;
+}
+
+article.me {
+    position: relative;
+    clear: both;
+    float: right;
+    margin-top: 10px;
+    width: 80%;
+}
+
+article.me>h1 {
+    position: absolute;
+    right: 0; top: 0;
+}
+
+article.me>h1>em {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(imgs/me.png)no-repeat 50% 50%/cover;
+    border-radius: 15px;
+    font-size: 0;
+    line-height: 0;
+}
+
+article.me>h1>b.nickname {
+    position: absolute;
+    top: 0;
+    right: 55px;
+    max-width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: -1px;
+}
+
+article.me>p.txt {
+    position: relative;
+    float: right;
+    margin-right: 35px; margin-top: 20px;
+    max-width: 100%;
+    border-width:20px 18px 9px 10px ;
+    border-style:solid;
+    border-color: black;
+    border-image: url(imgs/talkboxMe.png) fill 20 18 9 10 stretch;
+}
+
+article.me>p.txt>time {
+    position: absolute;
+    left: -63px; bottom: -9px;
+    width: 50px; height: 12px;
+    font-size: 10px;
+    line-height: 12px;
+}
+

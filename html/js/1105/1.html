@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // // 10000까지 8이라는 숫자가 몇 번 나오는지 도출하시오.
+
+            // var num = 0;
+            // var count = 0;
+            // var temp = 0;
+
+            // while (true) {
+
+            //     num++;
+            //     temp = num;
+            //     while (true) {
+            //         if (temp % 10 == 8) //증가되는 숫자 중에 8이 있는지 확인{
+            //             count++;
+            //         }
+            //         temp /= 10;
+            //         temp = parseInt(temp);// parseInt(정수로 변환): ex)8.8이라는 숫자중에 필요한 숫자는 8
+            //         if (temp != 8 && temp<=10)
+            //             break;
+            //         }
+            //     if (num == 10000) 
+            //         break;
+                
+            // console.log(count);
+
+            //#1 10000까지 증가되어야 할 변수 필요
+            var num = 0;
+            var count = 0;
+            var temp = 0;
+            while(true){//#3은 2자리수만 1자리수로 변경되기 때문에 계속 반복해서 3자리..4자리 수 등을 1의 자리로 만들 필요가 있다.
+                num++;
+                temp = num; //#7 증가되는 num의 숫자중 num을 변경하지 않고 그 순간의 숫자에 8이 몇 개 있는지 확인할 수 있게 하기 위해서 순간의 숫자를 저장할 필요가 있다.
+                            //   하단 표현식 중 모든 nim을 temp로 변경한다.
+                while(true){
+                    if(temp%10 == 8) count++; //#2 증가되는 숫자 중에 8이 있는지 확인
+
+                    temp /= 10;// #3 temp에 할당되어 있는 숫자를 1의 자리수로 내리는 작업 ex) 88/=1- - 8.8
+
+                    temp = parseInt(temp);//#4 parseInt(정수로 변환): ex)8.8이라는 숫자중에 필요한 숫자는 8
+
+                    if(temp<10 && temp!=8) break; //#6 내부(중첩) 반복문을 뛰쳐나가야 한다. 나머지 값이 1의 자리수라면, 8을 제외한 나머지 숫자(1-9)만 있을때 더이살 반복문을 돌릴 필요가 없다.
+                }
+                if(num == 10000) break;
+            }
+            alert(count);
+        </script>
+    </body>
+</html>

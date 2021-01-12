@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=<sc>, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 여성전용 만화까페를 개설하도록 한다. 조건은 다음과 같다. 지역은 서울이면서 성별은 여성만 가입되도록 만들고 싶다. ( 가입이 되면
+            // '회원가입' 확인창 뜨고 끝 ) 다음 조건으로 20~30대라면 남성이라도 보조로 가입하도록 하고싶다. (가입이 되면 '보조회원가입' 확인창
+            // 뜨고 끝, 회원가입이 안되면 다른 회원을 계속 받을 수 있다. ) ---->>지역 값을 받는 string타입 변수는 area라고 한다.
+            // 지역은 '서울', '경기도', '충청도남도' or '북도' , '강원도', '전라남도' or '북도', '경상북도' or '경상남도'만
+            // 가능 ---->>성별 값을 받는 string타입 변수는 gender라고 한다. 성별은 '남성' 또는 '여성'만 입력가능 ---->>나이
+            // 설정은 number타입으로 age를 사용한다. 나이는 0~120 까지 입력 가능 각 변수의 값은 prompt함수 또는 confirm을
+            // 활용한다.
+
+            while (true) {
+                var gender = prompt("성별을 적어주세요.");
+                if (gender == "여성" || gender == "여자" || gender == "여") {
+
+                    var area = prompt("거주지역을 적어주세요.");
+                    if (area == "서울" || area == "경기도" || area == "경상남도" || area == "경상북도" || area == "전라남도" || area == "전라북도" || area == "강원도" || area == "충청남도" || area == "충청북도") {
+                        if (area == "서울") {
+                            alert("회원가입");
+                            break;
+                        }else if(area == "경기도" || area == "경상남도" || area == "경상북도" || area == "전라남도" || area == "전라북도" || area == "강원도" || area == "충청남도" || area == "충청북도"){
+                            alert("서울 외의 지역은 가입이 불가합니다.")
+                        }
+                    }else{
+                        alert("정확한 지역명을 입력하십시오.")
+                    }
+                } else if (gender == "남성" || gender == "남자" || gender == "남") {
+                    var age = prompt("나이를 적어주세요.") * 1;
+                    if (age >= 20 && age <= 39) {
+                        alert("보조회원가입");
+                        break;
+                    } else if (age >= 0 && age <= 120) {
+                        alert("가입불가");
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+.web, .mobile {display: none;}
+.tablet{display: block;}
+
+header{
+    position: fixed;
+    width: 100%;
+    background: cadetblue;
+}
+header>div.center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 80px;
+    margin: 0 auto;
+    height: 80px;
+    background: cornsilk;
+}
+header>div.center>.menu{
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    width: 30px; height: 3px;
+    background: gray;
+}
+header>div.center>.menu:after{
+    position: absolute;
+    left: 0; top: -10px;
+    content: "";
+    width: 30px; height: 3px;
+    background:gray;
+}
+header>div.center>.menu:before{
+    position: absolute;
+    left: 0; bottom: -10px;
+    content: "";
+    width: 30px; height: 3px;
+    background: gray;
+}
+header>div.center>h1{
+    width: 200px;
+    text-align: center;
+    line-height: 80px;
+    background: darkseagreen;
+}
+header>div.center>nav{
+    position: absolute;
+    left: -230px; top: 0;
+    z-index: 9999;
+    width: 200px;
+    background: darksalmon;
+    transition: all .3s ease;
+}
+header > div.center > nav>p.link_home{
+    height: 50px;
+}
+header > div.center > nav>p.close{
+    position: absolute;
+    right: -30px; top: 0;
+    width: 30px; height: 30px;
+    background-color: crimson;
+}
+header>div.center>nav>ul{
+    min-height: 250px;
+}
+header>div.center>nav>ul>li{
+    height: 50px;
+}
+header>div.center>.curtain{
+    position: absolute;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0, .1);
+}
+header>div.center>dl{
+    overflow: hidden;
+    width: 45px; height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background: lightslategray;
+}
+header>div.center>dl>dd{
+    height: 80px;
+}
+
+/* event */
+header>div.center>.menu:active~nav{
+    left: 0;
+}

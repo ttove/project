@@ -1,0 +1,45 @@
+.mobile, .tablet {display:none;}
+.web {display: block;}
+
+header{
+    position: fixed;
+    width: 100%; height: 80px;
+    background: cadetblue;
+}
+header>div.center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 80px;
+    margin: 0 auto;
+    width: 1200px; height: 80px;
+    background: cornsilk;
+}
+header>div.center>h1{
+    width: 200px; height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background: darkseagreen;
+}
+header>div.center>nav{
+    width: 870px; height: 80px;
+    background: darksalmon;
+}
+header>div.center>nav>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header>div.center>nav>ul>li{
+    flex: 0 0 auto;
+}
+header>div.center>dl{
+    overflow: hidden;
+    width: 45px; height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background: lightslategray;
+}
+header>div.center>dl>dd{
+    height: 80px;
+}

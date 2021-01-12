@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>휘닉스</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/header_web.css">
+    <link rel="stylesheet" media="only screen and (max-width:1199px)" href="css/header_mobile.css">
+    <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/main_web.css">
+    <link rel="stylesheet" media="only screen and (max-width:1199px)" href="css/main_mobile.css">
+    <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/footer_web.css">
+    <link rel="stylesheet" media="only screen and (max-width:1199px)" href="css/footer_mobile.css">
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+        @font-face {
+            font-family: 'Handon3gyeopsal300g';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal300g.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* ::-webkit-scrollbar {
+            z-index: 1000;
+            width: 1.5rem;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #121f44;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 1rem;
+        }
+        ::-webkit-scrollbar-button:start:decrement,
+        ::-webkit-scrollbar-button:end:increment{
+            width: 1.8rem;
+            height: 1.8rem;
+            background-color: #121f44;
+        } */
+
+
+        html {
+            font-family: 'Handon3gyeopsal300g';
+            font-size: 62.5%;
+            cursor: default;
+            overflow: auto;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        video {
+            object-fit: cover;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () { 
+
+            //video
+            if ($(window).width() > 1199) {
+                $("video").css("max-width", $(window).width());
+                $("video").css("max-height", $(window).height());
+                    $("video").css("height", $(window).height());
+            } else{
+                    $("video").css("max-height", $(window).height());
+                    $("video").css("height", $(window).height());
+                }
+            $(window).resize(function () {
+                if ($(window).width() > 1199) {
+                    $("video").css("max-width", $(window).width());
+                    $("video").css("max-height", $(window).height());
+                    $("video").css("height", $(window).height());
+                } else{
+                    $("video").css("max-height", $(window).height());
+                    $("video").css("height", $(window).height());
+                }
+            });
+
+            // 햄버거 버튼 색 변경 
+            $(window).on("scroll",function(){
+                if( $(window).scrollTop() >  $(window).height() ){
+                    $(".btn").css("background-image","url('imgs/menu_btn.png')");
+                } else {
+                    $(".btn").css("background-image","url('imgs/menu_btnw.png')");
+                }
+            });
+
+            //예약
+            var n = 0;
+            $("button.plus").on("click",function(){
+                n = $(this).parents("div").children("span.num").html();
+                if(n < 5) {
+                    $(this).parents("div").children("span.num").html(++n);
+                }
+            });
+
+            $("button.minus").on("click",function(){
+                n = $(this).parents("div").children("span.num").html();
+                if(n > 1) {
+                    $(this).parents("div").children("span.num").html(--n);
+                }
+            });
+            
+
+            //mobile_menu
+            $(".btn").click(function () {
+                    $("#menu,.page_cover,html").addClass("open");
+                    window.location.hash = "#open";
+                });
+
+                window.onhashchange = function () {
+                    if (location.hash != "#open") {
+                        $("#menu,.page_cover,html").removeClass("open");
+                    }
+                };
+
+            //date
+            $.datepicker.setDefaults($.datepicker.regional['ko']); 
+                $( "#startDate" ).datepicker({
+                    dateFormat: "yy-mm-dd",
+                    nextText: '다음 달',
+                    prevText: '이전 달', 
+                    dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+                    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'], 
+                    monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                    maxDate: 0,
+                    yearSuffix: "년",
+                    onClose: function( selectedDate ) {
+                        $("#endDate").datepicker( "option", "minDate", selectedDate );
+                    }    
+
+                });
+                $( "#endDate" ).datepicker({
+                    dateFormat: "yy-mm-dd",
+                    nextText: '다음 달',
+                    prevText: '이전 달', 
+                    dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+                    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'], 
+                    monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                    maxDate: 30,
+                    yearSuffix: "년",
+                    onClose: function( selectedDate ) { 
+                        $("#startDate").datepicker( "option", "maxDate", selectedDate );
+                    }    
+
+                });
+
+            //part3
+            $(function(){
+                var banner = {
+                    idx : 0,
+                    len : $(".bannerList").children("li").length
+                }
+                $(".btn_next").click(function(){
+                    banner.idx++
+                    if(banner.idx > (banner.len-1)){
+                        banner.idx=0;
+                    }
+                    $(".bannerList").children("li").eq(banner.idx).fadeIn(500)
+                    .siblings("li").fadeOut(500)
+                });
+
+
+                $(".btn_prev").click(function(){
+                    banner.idx--
+                    if(banner.idx < 0){
+                        banner.idx = banner.len-1;
+                    }
+                    $(".bannerList").children("li").eq(banner.idx).fadeIn(500)
+                    .siblings("li").fadeOut(500)
+                })
+            });
+
+            //btnTop
+            $("#btnTop").click(function () {
+                    var position = $("body").offset();
+                    $("html,body").stop().animate({ scrollTop: position.top }, 500);
+                });
+
+        });
+    </script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <header class="mobile">
+        <div>
+            <div class="mobile btn"></div>
+            <!-- <h1><a href="/phoenixH/main.html"><img src="imgs/m_logo.png" alt="로고이미지"></a></h1> -->
+            <div onclick="history.back();" class="page_cover"></div>
+            <div id="menu">
+                <div onclick="history.back();" class="close"></div>
+                <nav>
+                    <h1><a href="/Phoenix/main.html"><img src="imgs/m_logow.png" alt="로고이미지"></a></h1>
+                    <ul>
+                        <li>
+                            <a>RESORT</a>
+                            <ul>
+                                <li><a class="alert">휘닉스제주 소개</a></li>
+                                <li><a class="alert">이용요금 및 할인안내</a></li>
+                                <li><a class="alert">운영안내</a></li>
+                                <li><a class="alert">교통안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>ROOM</a>
+                            <ul>
+                                <li><a class="alert">객실이용안내</a></li>
+                                <li><a class="alert">벨라테라스(콘도)</a></li>
+                                <li><a class="alert">힐리우스(별장)</a></li>
+                                <li><a class="alert">객실패키지</a></li>
+                                <li><a class="alert">객실예약</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>FOOD</a>
+                            <ul>
+                                <li><a class="alert">민트</a></li>
+                                <li><a class="alert">해랑</a></li>
+                                <li><a class="alert">섭지</a></li>
+                                <li><a class="alert">코지</a></li>
+                                <li><a class="alert">모들</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>WEDDING</a>
+                            <ul>
+                                <li><a class="alert">웨딩</a></li>
+                                <li><a class="alert">세미나/연회</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>MEMBERSHIP</a>
+                            <ul>
+                                <li><a class="alert">분양안내</a></li>
+                                <li><a class="alert">회원카드안내</a></li>
+                                <li><a class="alert">명의개서안내</a></li>
+                                <li><a class="alert">회원권 사용실적</a></li>
+                                <li><a class="alert">연회비 납부</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="mobile">
+        <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" width="100%" height="100%">
+            <source src="imgs/main_video.mp4" type="video/mp4">
+        </video>
+        
+        <section class="part1">
+            <div class="box"><h1>PHOENIX RESERVATION</h1></div>
+            <div class="box1">
+                <div>
+                    <p>Check In - Check Out</p>
+                    <input type="text" id="startDate" autocomplete="off">
+                    <span> - </span>
+                    <input type="text" id="endDate" autocomplete="off">
+                </div>
+                <div>
+                    <p>Rooms</p>
+                    <button class="minus">-</button>
+                    <span class="num"> 1 </span>
+                    <button class="plus">+</button>
+                </div>
+                <div>
+                    <p>Adult</p>
+                    <button class="minus">-</button>
+                    <span class="num"> 1 </span>
+                    <button class="plus">+</button>
+                </div>
+                <div>
+                    <p>Child</p>
+                    <button class="minus">-</button>
+                    <span class="num"> 1 </span>
+                    <button class="plus">+</button>
+                </div>
+                <a>SEARCH</a>
+            </div>
+        </section>
+        <section class="part2">
+            <h1>AMENITIES</h1>
+            <div>
+                <div class="a_sub1">
+                    <div></div>
+                    <p>Swimming pool</p>
+                </div>
+                <div class="a_sub2">
+                    <div></div>
+                    <p>Activity Center</p>
+                </div>
+                <div class="a_sub3">
+                    <div></div>
+                    <p>Kids Playzone</p>
+                </div>
+                <div class="a_sub4">
+                    <div></div>
+                    <p>Mint Garden</p>
+                </div>
+                <div class="a_sub5">
+                    <div></div>
+                    <p>Facilities</p>
+                </div>
+            </div>
+        </section>
+        <section class="part3">
+            <h1>EVENT & PACKAGE</h1>
+            <ul class="bannerList">
+                <li class="on">
+                    <img src="imgs/Event1.png" alt="banner1">
+                    <div>
+                        <h2>윈터 올인클루시브</h2>
+                        <p>선택은 심플하게, 즐거움은 다양하게</br>
+                            모든 것을 아무 고민 없이 마음껏 즐길 수 있는</br>
+                            ALL INCLUSIVE LIFE</p>
+                        <a>view more</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/Event2.png" alt="banner2">
+                    <div>
+                        <h2>GOODBYE 2020</h2>
+                        <p>온화한 빛으로 가득한 곳에서</br>
+                            겨울의 즐거움을 함께</p>
+                        <a>view more</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/Event3.png" alt="banner3">
+                    <div>
+                        <h2>투숙객 온수풀 무료이벤트</h2>
+                        <p>제주의 푸른 하늘 아래 따뜻한</br> 온수풀에서 즐기는 힐링타임</br>
+                            휘닉스 제주 섭지코지에서 즐겨보세요</br></p>
+                        <a>view more</a>
+                    </div>
+                </li>
+            </ul>
+            <p class="btn_prev">&lt;</p>
+            <p class="btn_next">&gt;</p>
+        </section>
+        <section class="part4">
+            <div>
+                <div>
+                    <h2>휘닉스 제주 섭지코지 운영 변경안내</h2>
+                    <p>사회적 거리두기 정부 방침에 따른 영업장 운영 변경안내 드립니다</p>
+                </div>
+                <div>
+                    <h2>[안내] 글라스하우스 대관행사로 인한 휴장 안내</h2>
+                    <p>2021년 1월 19일(화)부터 21일(목)까지</br>
+                        글라스하우스 대관행사로 인해 해당 기간 이용이 제한됩니다.</p>
+                </div>
+                <div>
+                    <h2>실내외 온수풀 및 사우나 휴장일 안내</h2>
+                    <p>이용에 차질 없으시길 바라며,</br>
+                        2020년 11월부터 2021년 2월까지 매주 수요일 휴장하여 운영합니다</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <p id="btnTop"><span>TOP</span></p>
+    <footer>
+        <section>
+            <div class="fBox1">
+                <img src="imgs/f_logo.png" alt="푸터로고">
+                <p>대표이사 : 이윤규</p>
+                <p>사업장등록번호 : 616-81-57404</p>
+                <p>통신판매신고 : 평창 2003-8호</p>
+            </div>
+            <div class="fBox2">
+                <h1>CONTACT US</h1>
+                <img src="imgs/ico_marker01.png" alt="주소"><span>제주특별자치도 서귀포시 성산읍 섭지코지로 107</span>
+                <img src="imgs/ico_phone01.png" alt="유선전화"><span>064-731-7000~5</span>
+                <img src="imgs/ico_mail01.png" alt="이메일"><span>kyon.jeongpil@phoenixhnr.co.kr</span>
+                <div>
+                    <img src="imgs/footer-instagram.png" alt="">
+                    <img src="imgs/footer-facebook.png" alt="">
+                    <img src="imgs/footer-blog.png" alt="">
+                </div>
+            </div>
+            <div class="fBox3">
+                <a>오시는 길</a>
+                <a>HOTELS & RESORTS</a>
+                <a>PYEONGCHANG</a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

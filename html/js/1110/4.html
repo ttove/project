@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="tit">하</h1>
+    <ul id="listBox">
+        <li>AAAA</li>
+        <li>BBBB</li>
+        <li>CCCC</li>
+    </ul>
+    <script>
+        //요소에 글자나, 자식요소 등을 세팅하는 것은 setter
+        //요소가 갖고있는 것(글자,요소)이나 데이터 등을 갖고 오는 것은 getter
+        var h_1 = document.getElementById("tit");
+        alert(h_1.outerText);
+
+        var listU = document.getElementById("listBox");
+        alert(listU.outerText)
+    </script>
+</body>
+</html>

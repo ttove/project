@@ -1,0 +1,183 @@
+header{
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+header>div{
+    width: 180rem;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+header>div>h1{
+    margin: 4rem 0 0 8rem;
+}
+header>div>nav>p>img{
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+    z-index: 1;
+    width: 2.8%;
+}
+
+header>  div > nav > div {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 192rem;
+    height: 80rem;
+    background: #fff;
+}
+header>  div > nav > div > form {
+    margin: 4rem 0 2rem 35rem;
+}
+header>  div > nav > div > form > input {
+    position: relative;
+    padding: 2rem 0 3rem 5rem;
+    width: 116rem;
+    height: 5rem;
+    background: none;
+    border: none;
+    border-bottom: 0.1rem solid #736357;
+    text-align: center;
+    font-size: 1.8rem;
+}
+header>  div > nav > div > form > input::placeholder {
+    color: #525252;
+    font-weight: 600;
+    text-align: center;
+}
+header>  div > nav > div > form > input:placeholder:focus {
+    color: transparent;
+}
+header>  div > nav > div > form > input:focus {
+    outline: none;
+    font-weight: 600;
+    color: #525252;
+}
+header>  div > nav > div > form > button {
+    position: absolute;
+    top: 4.5rem;
+    right: 45rem;
+    background: none;
+    border: none;
+}
+header>  div > nav > div > form > button:focus {
+    outline: none;
+}
+header>  div > nav > div > ul {
+    width: 174rem;
+    height: 66rem;
+    margin: 0 8rem;
+}
+header>  div > nav > div > ul > li{
+    position: relative;
+    padding-bottom: .5rem;
+}
+header>  div > nav > div > ul > li:first-child {
+    background: url(../imgs/refri_s.png) no-repeat 0 0;
+    width: 43rem;
+    height: 33rem;
+    float: left;
+    padding-right: .5rem;
+}
+header>  div > nav > div > ul > li:nth-child(2) {
+    background: url(../imgs/coffee_s.png) no-repeat 0 0;
+    width: 43rem;
+    height: 33rem;
+    float: left;
+    padding-right: .5rem;
+}
+header>  div > nav > div > ul > li:nth-child(3) {
+    background: url(../imgs/kitchen_s.png) no-repeat 0 0;
+    width: 43rem;
+    height: 33rem;
+    float: left;
+    padding-right: .5rem;
+}
+header>  div > nav > div > ul > li:nth-child(4) {
+    background: url(../imgs/living_s.png) no-repeat 0 0;
+    width: 43rem;
+    height: 33rem;
+    float: left;
+}
+header>  div > nav > div > ul > li:nth-child(5) {
+    background: url(../imgs/professional_s.png) no-repeat 0 0;
+    width: 43rem;
+    height: 33rem;
+    float: left;
+    padding-right: .5rem;
+}
+header>  div > nav > div > ul > li:nth-child(6) {
+    background: url(../imgs/smegclass_s.png) no-repeat 0 0;
+    width: 43rem;
+    height: 33rem;
+    float: left;
+    padding-right: .5rem;
+}
+header>  div > nav > div > ul > li:nth-child(7) {
+    background: url(../imgs/customer_s.png) no-repeat 0 0;
+    width: 43rem;
+    height: 33rem;
+    float: left;
+    padding-right: .5rem;
+}
+header>  div > nav > div > ul > li:nth-child(8) {
+    background: url(../imgs/company_s.png) no-repeat 0 0;
+    width: 43rem;
+    height: 33rem;
+    float: left;
+}
+header>  div > nav > div > ul > li > a {
+    display: none;
+    background: #736357cd;
+    width: 43rem;
+    height: 33rem;
+    padding-top: 3.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+header>  div > nav > div > ul > li:hover>a{
+    display: block;
+}
+header>  div > nav > div > ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 8.5rem;
+    left: 4.5rem;
+    width: 34rem;
+    height: 22rem;
+    padding: 0 0 0 4rem;
+    box-sizing: border-box;
+}
+header>  div > nav > div > ul > li:hover>ul{
+    display: block;
+}
+header>  div > nav > div > ul > li>ul>li {
+    float: left;
+    text-align: center;
+    width: 13rem;
+    font-size: 1.55rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+}
+header>  div > nav > div > ul > li:nth-child(6) > ul>li {
+    text-align: center;
+    width: 25rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+}
+header>  div > nav > div > ul > li>ul>li>a{
+    color: #fff;
+}
+header>  div > nav > div > ul > li > ul > li:hover > a {
+    font-weight: 800;
+    color: #fff8dc;
+    border-bottom: 0.2rem solid #fff8dc ;
+}

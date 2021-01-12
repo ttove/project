@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'nanum';
+            src: url('../fonts/NanumBarunGothic.eot');
+            src: local('※'),
+                url('../fonts/NanumBarunGothic.woff') format('woff'),
+                url('../fonts/NanumBarunGothic.ttf') format('truetype');
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+        a {
+            text-decoration: none;
+        }
+
+    </style>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/banner.css" />
+
+</head>
+
+<body>
+    <header>
+        <div id="header01">
+            <h1><a href="https://www.wah.or.kr:444/index.asp"><img src="https://www.wah.or.kr:444/assets/img/common/logo.gif" alt="웹접근성연구소 로고"></a></h1>
+            <form action="test.jsp">
+                <input type="search" name="search" />
+                <input type="image" src="https://www.wah.or.kr:444/assets/img/common/btn_search.gif" alt="검색하기">
+            </form>
+            <dl>
+                <dt class="hidden">유틸메뉴</dt>
+                <dd><a href="https://www.wah.or.kr:444/Member/login.asp">로그인</a></dd>
+                <dd><a href="https://www.wah.or.kr:444/Member/member_1.asp">회원가입</a></dd>
+                <dd><a href="https://www.wah.or.kr:444/UseInfo/Sitemap.asp">사이트맵</a></dd>
+            </dl>
+        </div><!-- header01 End -->
+        <nav>
+            <h1 class="hidden">주요 서비스</h1>
+            <!--ul>li*6>a[href="#"]+ul>li*5>a[href="#"]-->
+            <ul id="nav">
+                <li><a href="#">웹 접근성이란</a>
+                    <ul>
+                        <li><a href="#">웹 접근성 개요</a></li>
+                        <li><a href="#">법. 제도</a></li>
+                        <li><a href="#">장애인의 웹사이트 이용 이해</a></li>
+                        <li><a href="#">웹 접근성 품질인증</a></li>
+                        <li><a href="#">관련사이트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">진단 및 컨설팅</a>
+                    <ul>
+                        <li><a href="#">웹 접근성 개선지원 사업</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">교육마당</a>
+                    <ul>
+                        <li><a href="#">정보 접근성 전문 교육</a></li>
+                        <li><a href="#">웹 접근성 온라인교육</a></li>
+                        <li><a href="#">세미나</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">지식마당</a>
+                    <ul>
+                        <li><a href="#">지식마당 개요</a></li>
+                        <li><a href="#">개발자아카이브</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">정보마당</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자료실</a></li>
+                        <li><a href="#">뷰어 다운로드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">기관 소개</a>
+                    <ul>
+                        <li><a href="#">기관장 인사말</a></li>
+                        <li><a href="#">한국정보화진흥원 소개</a></li>
+                        <li><a href="#">정보접근성 주요사업</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav><!-- header02 End -->
+    </header><!-- header End 화면 끝까지 확장되는 역할 -->
+
+
+    <main>
+        <aside>
+            <h1 class="hidden">메인배너</h1>
+            <h2 class="hidden">배너목록</h2>
+            <ul id="banner_list">
+                <li><a href="#"><img src="imgs_2/aoa_banner.jpg" alt="배너1"></a></li>
+                <li><a href="#"><img src="imgs_2/banner02.jpg" alt="배너2"></a></li>
+            </ul>
+            <h2 class="hidden">배너페이징</h2>
+            <ul id="banner_bullet">
+                <li><img src="imgs_2/circle_on.png" alt="첫 번째 배너로 이동"></li>
+                <li><img src="imgs_2/circle_off.png" alt="두 번째 배너로 이동"></li>
+            </ul>
+            <h2 class="hidden">배너자동재생</h2>
+            <p id="banner_btn"><img src="imgs_2/btn_pause.png" alt="배너 자동재생 또는 일시정지 버튼"></p>
+        </aside>
+    </main>
+</body>
+
+</html>

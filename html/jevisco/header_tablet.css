@@ -1,0 +1,83 @@
+.web, .mobile {display: none;}
+.tablet{display: block;}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: cornsilk;
+    box-shadow: 0 3px 2px 0 rgba(80,80,80,.5);
+}
+header > div.center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 60px;
+    background: darkkhaki;
+}
+header>div.center>.menu{
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    width: 30px; height: 3px;
+    background: gray;
+}
+header>div.center>.menu:after{
+    position: absolute;
+    left: 0; top: -10px;
+    content: "";
+    width: 30px; height: 3px;
+    background: gray;
+}
+header>div.center>.menu:before{
+    position: absolute;
+    left: 0; bottom: -10px;
+    content: "";
+    width: 30px; height: 3px;
+    background: gray;
+}
+header > div.center > h1 {
+    width: 200px;
+    background: cornflowerblue;
+}
+header > div.center > nav {
+    position: absolute;
+    left: -230px; top: 0;
+    z-index: 9999;
+    width: 200px; height: ;
+    background: ivory;
+    transition: all .3s ease;
+}
+header > div.center > nav>p.link_home{
+    height: 50px;
+}
+header > div.center > nav>p.close{
+    position: absolute;
+    right: -30px; top: 0;
+    width: 30px; height: 30px;
+    background-color: crimson;
+}
+header > div.center > nav>ul{
+    min-height: 250px; /* 최소 li개수 만큼의 크기를 지정함 */
+}
+header > div.center > nav>ul>li{
+    height: 50px;
+}
+header > div.center>.curtain{
+    position: absolute;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0, .3);
+}
+header > div.center > dl {
+    overflow: hidden;
+    width: 40px; height: 30px;
+    background: orange;
+}
+header > div.center > dl>dd{
+    height: 30px;
+}
+
+/* event */
+header>div.center>.menu:active~nav{
+    left: 0;
+}

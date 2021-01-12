@@ -1,0 +1,174 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 8.3rem;
+    z-index: 9000;
+    background: #fff;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.15);
+}
+header > div {
+    width: 120rem;
+    height: 8.3rem;
+    margin: 0 auto;
+}
+header > div > h1 {
+    float: left;
+    margin-top: 2rem;
+    margin-right: 7.9rem;
+}
+header > div > nav {
+    float: left;
+    margin-right: 7rem;
+
+}
+
+header > div > nav > ul.depth1 > li {
+    position: relative;
+    padding: 3.3rem 3.6rem 0;
+    float: left;
+    height: 8.4rem;
+
+}
+header > div > nav > ul.depth1 > li > a {
+    padding-bottom: 1.3rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: #000;
+    font-weight: bold;
+    border-bottom: 0.3rem solid #fff;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 {
+    display: none;
+}
+
+header > div > nav > ul.depth1 > li > ul.depth2 {
+    position: absolute;
+    left: 0;
+    top: 8.3rem;
+
+    background-color: #07399c;
+}
+
+header > div > nav > ul.depth1 > li > ul.depth2 > li {
+    position: relative;
+    width: 18.5rem;
+    padding-left: 2.1rem;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li:not(:last-of-type) {
+    border-bottom: 0.1rem solid #03205f;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li > a {
+    display: block;
+
+    font-size: 1.4rem;
+    line-height: 4.4rem;
+    color: #fff;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li > a > img {
+    float: right;
+    padding: 1.7rem 1rem 0 0;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li > ul.depth3 {
+    display: none;
+    position: absolute;
+    left: 20.5rem;
+    top: -0.1rem;
+    width: 18.7rem;
+    background-color: #fff;
+    border: 0.1rem solid #07399c;
+    border-left: 0 none;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li > ul.depth3 > li > a {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 3.4rem;
+    padding-left: 2.2rem;
+
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li > ul.depth3 > li {
+    position: relative;
+    border-left: 0.1rem solid #07399c;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li > ul.depth3 > li:nth-of-type(1) {
+
+    border-left: 0 none;
+    padding-top: 1rem;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li > ul.depth3 > li > img {
+    position: absolute;
+    left: 0;
+    top: 2.3rem;
+    padding-left: 1rem;
+
+}
+header > div > div.src {
+    float: left;
+    margin: 2.2rem 0.2rem 0 0;
+
+}
+header > div > div.src > button {
+    height: 3.6rem;
+    font-weight: bold;
+    color: #eceff1;
+    background-color: #424c51;
+    font-size: 1.2rem;
+    line-height: 3.4rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+header > div > div.src > button > img {
+    padding-left: 0.8rem;
+    vertical-align: middle;
+}
+header > div > div.src > form {
+    display: none;
+}
+header > div > div.lan {
+    float: left;
+    margin-top: 2.2rem;
+}
+
+header > div > div.lan > dl > dt {
+    position: relative;
+    width: 4.6rem;
+    height: 3.6rem;
+    border: 0.1rem solid #a9b0b8;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 3.4rem;
+    font-weight: bold;
+}
+header > div > div.lan > dl > dt > img {
+    position: absolute;
+    left: 1.9rem;
+    top: 2.5rem;
+}
+header > div > div.lan > dl > dd {
+    display: none;
+}
+
+/* event */
+header > div > nav > ul.depth1 > li:hover > ul.depth2 {
+    display: block;
+}
+header > div > nav > ul.depth1 > li > a:hover {
+    border-bottom: 0.3rem solid #07399c;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li:not(:first-of-type):hover {
+    background: #fff url("../imgs/bu_2depth_on.png") no-repeat 19rem 50%;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li:first-of-type:hover {
+    background-color: #00a6ff;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li > a:hover {
+    color: #000;
+}
+
+header > div > nav > ul.depth1 > li > ul.depth2 > li:hover > ul.depth3 {
+    display: block;
+}
+header > div > nav > ul.depth1 > li > ul.depth2 > li > ul.depth3 > li > a:hover {
+    text-decoration: underline;
+    color: #07399c;
+}

@@ -1,0 +1,41 @@
+.mobile, .tablet {display:none;}
+.web {display: block;}
+
+header {
+    position: fixed;
+    width: 100%; height: 80px;
+    background: cornsilk;
+    box-shadow: 0 3px 2px 0 rgba(80,80,80,.5);
+}
+header > div.center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 999px; height: 80px;
+    background: darkkhaki;
+}
+header > div.center > h1 {
+    width: 200px; height: 40px;
+    background: cornflowerblue;
+}
+header > div.center > nav {
+    width: 600px; height: 30px;
+    background: ivory;
+}
+header > div.center > nav>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > div.center > nav>ul>li{
+    flex: 0 0 auto;
+}
+header > div.center > dl {
+    overflow: hidden;
+    width: 40px; height: 30px;
+    background: orange;
+}
+header > div.center > dl>dd{
+    height: 30px;
+}

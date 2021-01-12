@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="css.css">
+        <style>
+            article.you {
+                position: relative;
+                clear: both;
+                float: left;
+                margin-top: 10px;
+                width: 80%;
+            }
+
+            article.you > h1 {
+                float: left;
+                position: relative;
+
+            }
+
+            article.you > h1 > em {
+                display: block;
+                width: 30px;
+                height: 30px;
+                background: #fff url(imgs/you.png)no-repeat 50% 50%/cover;
+                border-radius: 15px;
+                font-size: 0;
+                line-height: 0;
+            }
+
+            article.you > h1 > b.nickname {
+                position: absolute;
+                top: 5px;
+                right: -15px;
+                max-width: 70px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 10px;
+                line-height: 10px;
+                letter-spacing: -1px;
+            }
+
+            article.you > p.txt {
+                position: relative;
+                float: left;
+                margin-right: 35px; margin-top: 20px;
+                max-width: 100%;
+                border-width: 20px 9px 10px 18px;
+                border-style: solid;
+                border-color: black;
+                border-image: url(imgs/talkboxU.png) fill 20 9 10 18 stretch;
+            }
+
+            article.you > p.txt > time {
+                position: absolute;
+                right: -63px;
+                bottom: -9px;
+                width: 50px;
+                height: 12px;
+                font-size: 10px;
+                line-height: 12px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>카카오톡</h1>
+        <section>
+            <article class="me">
+                <h1>
+                    <span class="hidden">본인</span>
+                    <em>대표 사진</em>
+                    <b class="nickname">a</b>
+                </h1>
+                <p class="txt">가나다라마바사아자차카타파하<time datetime="2020-10-19T10:07">오전 10:07</time>
+                </p>
+            </article>
+
+            <article class="you">
+                <h1>
+                    <span class="hidden">상대편</span>
+                    <em>대표 사진</em>
+                    <b class="nickname">b</b>
+                </h1>
+                <p class="txt">가나다라마바사아자차카타파하<time datetime="2020-10-19T10:08">오전 10:08</time>
+                </p>
+            </article>
+        </section>
+    </body>
+
+</html>

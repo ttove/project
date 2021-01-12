@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <style>
+        div{
+            width: 400px;
+            height: 100px;
+            background:rgba(180,100,120, 1);
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            /* 
+            transform속성은 블럭요소만 사용가능
+            transform: skew(15deg, 0); 
+            */
+            transform: rotate3d(1,0,0, 45deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>transform</h1>
+    <p>transform을 적용한 요소는 position:relattive를 적용한 것과 비슷한 상황을 연출한다.</p>
+    <div>transform</div>
+    <p>transform 하단요소</p>
+    
+</body>
+</html>

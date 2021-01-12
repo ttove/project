@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>순천향대학교 부속 서울병원</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.0.min.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT7sSTMO5sgyqu_1l0KuaIK_QAyv0U44c&callback=initMap&libraries=&v=weekly"
+            defer="defer"></script>
+        <style>
+            @font-face {
+                font-family: 'S-CoreDream-3Light';
+                src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            html {
+                font-size: 62.5%;
+            }
+        </style>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("myslides");
+                if (n > x.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = x.length };
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>
+                    <a href="https://www.schmc.ac.kr/seoul/index.do"><img src="imgs/logo.png" alt="순천향대학 서울병원 로고"></a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">진료과/의료진</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="#">진료과</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">의료진</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">전문클리닉</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">전문센터</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">진료지원부서</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">이용안내</a>
+                            <div>
+                                <ul class="off">
+                                    <li>
+                                        <a href="#">예약내역</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">진료내역</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">위치안내</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">외래진료안내</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">건강검진안내</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">건강정보</a>
+                            <div>
+                                <ul class="off">
+                                    <li>
+                                        <a href="#">건강정보</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">세미나/강좌</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">해외여행자 건강정보</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">질환별 안내장</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">병원소개</a>
+                            <div>
+                            <ul class="off">
+                                    <li>
+                                        <a href="#">병원개요</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">연혁</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">병원장 인사말</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">사회공헌</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">병원소개</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                            <div>
+                                <ul class="off">
+                                    <li>
+                                        <a href="#">이달의 순천향인</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">칭찬합니다</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">칭찬사연접수내역</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">불편/건의접수</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">불편/건의접수내역</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="banner">
+                <aside>
+                    <ul class="banner_img">
+                        <li><img src="imgs/banner1.png" alt="배너1" class="myslides"></li>
+                        <li><img src="imgs/banner2.png" alt="배너2" class="myslides"></li>
+                        <li><img src="imgs/banner3.png" alt="배너3" class="myslides"></li>
+                    </ul>
+                    <ul class="banner_btn">
+                        <li><a onclick="plusDivs(-1)" id="prev"><img src="imgs/left.png" alt="배너1"></a></li>
+                        <li><a onclick="plusDivs(+1)" id="next"><img src="imgs/right.png" alt="배너2"></a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div>
+                <section class="service_btn">
+                    <div>
+                        <a href="#">
+                            <img src="imgs/heart.png" alt="건강증진센터">
+                            <p>건강증진센터</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="imgs/bag.png" alt="진료협력센터">
+                            <p>진료협력센터</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="imgs/earth.png" alt="센터">
+                            <p>Global Healthcare</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="imgs/call.png" alt="주요전화번호">
+                            <p>주요전화번호</p>
+                        </a>
+                    </div>
+                </section>
+                <div>
+                    <section class="service_box">
+                        <div class="box1">
+                            <p><span>첫 방문고객</span><span> 전화예약</span></p>
+                            <p>전화번호를 남겨주시면 상담원을</br>통해 진료예약을 도와드립니다.</p>
+                            <form action="test.jsp">
+                                <input type="search" name="search">
+                                <button type="submit">신청</button>
+                            </form>
+                        </div>
+                        <div class="box2">
+                            <a href="#"><p>본인진료예약</p></a>
+                            <a href="#"><p>보호자 대리 예약</p></a>
+                            <a href="#"><p>진료예약확인</p></a>
+                        </div>
+                        <div class="box3">
+                            <p><span>의료진/진료과</span><span> 안내</span></p>
+                            <p>인간사랑을 실천하는</br>순천향대학교 서울병원의</br>전문의료진과 진료과를 소개합니다.</p>
+                            <form action="test.jsp">
+                                <input type="search" name="search">
+                                <button type="submit">검색</button>
+                            </form>
+                        </div>
+                    </section>
+                    <div class="service_item">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/time.png" alt="외래진료일정안내">
+                                    <p>외래진료일정 안내</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/hospital.png" alt="병원시설안내">
+                                    <p>병원시설안내</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/parking.png" alt="주차안내">
+                                    <p>주차안내</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/issue.png" alt="증명서 온라인 발급">
+                                    <p>증명서 온라인 발급</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/donate.png" alt="기부후원금">
+                                    <p>기부후원금</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="imgs/funeral.png" alt="장례식장">
+                                    <p>장례식장</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <section class="information">
+                        <div class="notice">
+                            <img src="imgs/bar_2.png" alt="제목바1">
+                            <h1>순천향대학병원 소식</h1>
+                            <ul>
+                                <li id="notice1">공지사항</li>
+                                <li id="hospital">병원소식</li>
+                                <li id="notice2">입찰공고</li>
+                            </ul>
+                            <ul>
+                                <li id="cont1">
+                                    <p>
+                                        <span>2020년 1차 신약 접수 변경사항 안내</span>
+                                        <time datetime="2020-08-27">2020-08-27</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <p>
+                                        <span>2020년 1차 신약 신청 접수 안내</span>
+                                        <time datetime="2020-08-13">2020-08-13</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <p>
+                                        <span>시설공사 입찰공고문</span>
+                                        <time datetime="2020-06-11">2020-06-11</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <p>
+                                        <span>‘대리처방 안 됩니다’ 단, 의식없거나 거동불편은 예외</span>
+                                        <time datetime="2020-02-27">2020-02-27</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <button type="submit">더보기 +</button>
+                                </li>
+                                <li id="cont2">
+                                    
+                                    <p>
+                                        <span>순천향대서울병원, 의료관광 우수 유치기관 4회 연속</span>
+                                        <time datetime="2020-11-12">2020-11-12</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <p>
+                                        <span>순천향대학교서울병원 인체유래물은행 개소</span>
+                                        <time datetime="2020-11-12">2020-11-12</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <p>
+                                        <span>'순천향의학연구 학술대회 2020’ 개최</span>
+                                        <time datetime="2020-11-09">2020-11-09</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <p>
+                                        <span>순천향대중앙의료원, 유엔개발계획(UNDP)·한국국제협력단(KOICA)과 K-방역 전수</span>
+                                        <time datetime="2020-11-09">2020-11-09</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <button type="submit">더보기 +</button>
+                                </li>
+                                <li id="cont3">
+                                    
+                                    <p>
+                                        <span>(수정) 순천향대학교부속서울병원 전동침대(3MOTOR) 입찰공고</span>
+                                        <time datetime="2020-10-20">2020-10-20</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <p>
+                                        <span>순천향대학교부속서울병원 용역계약(인력파견) 업체 선정 입찰공고</span>
+                                        <time datetime="2020-10-15">2020-10-15</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <p>
+                                        <span>순천향대학교부속서울병원 커피전문점 임대 운영사업자 선정 입찰공고</span>
+                                        <time datetime="2020-10-07">2020-10-07</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <p>
+                                        <span>순천향대학교부속서울병원 커피전문점 임대 운영사업자 선정 입찰공고</span>
+                                        <time datetime=" 선정 입찰공고">2020-09-08</time>
+                                        <img src="imgs/plus.png" alt="더보기버튼">
+                                    </p>
+                                    <button type="submit">더보기 +</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="health_inp">
+                            <img src="imgs/bar_1.png" alt="제목바2">
+                            <h1>건강정보</h1>
+                            <img src="imgs/health.png" alt="건강정보1">
+                            <img src="imgs/doctor.png" alt="의사">
+                            <p>김영환 교수</p>
+                            <p>건강검진에서 폐결절이 나왔는데 어떻게 해야하나요?</p>
+                            <time datetime="2020-10-16">2020-10-16</time>
+                            <button type="submit">자세히보기</button>
+                        </div>
+                    </section>
+                    <script>
+                        let map;
+                        function initMap() {
+                            map = new google
+                                .maps
+                                .Map(document.getElementById("map"), {
+                                    center: {
+                                        lat: 37.533612,
+                                        lng: 127.004205
+                                    },
+                                    zoom: 17
+                                });
+                        }
+                    </script>
+                    <div class="map">
+                        <img src="imgs/bar.png" alt="제목바3">
+                        <h2>찾아오시는 길</h2>
+                        <div id="map"></div>
+                        <address>
+                            <p>(우) 04401 서울특별시 용산구 대사관로 59</p>
+                            <p>안내전화 : 02.709.9114</p>
+                        </address>
+                    </div>
+                </div>    
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                <section>
+                    <ul>
+                        <li>
+                            <a href="#">비급여수가조회</a>
+                        </li>
+                        <li>
+                            <a href="#">사이트맵</a>
+                        </li>
+                        <li>
+                            <a href="#">환자 권리와 의무</a>
+                        </li>
+                        <li>
+                            <a href="#">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#">이메일</a>
+                        </li>
+                        <li>
+                            <a href="#">무단수집거부</a>
+                        </li>
+                        <li>
+                            <a href="#">모바일 앱</a>
+                        </li>
+                    </ul>
+                </section>
+                <address>
+                    <p>주소: 04401 서울특별시 용산구 대사관로 59</p>
+                    <p>ⓒ 2019 BY SOONCHUNHYANG UNIVERSITY HOSPITAL. ALL RIGHTS RESERVED</p>
+                </address>
+                <section>
+                    <a href="#"><img src="imgs/Asset 14.png" alt="순천향대학교 부속 서울병원"></a>
+                    <a href="#"><img src="imgs/Asset 15.png" alt="보건복지부 인증 의료기관"></a>
+                    <a href="#"><img src="imgs/Asset 16.png" alt="국가공인 웹접근성 품질 인증마크"></a>
+                </section>
+            </div>
+        </footer>
+        <script>
+            var noti = document.querySelector("#notice1");
+            var hospi = document.querySelector("#hospital");
+            var noti2 = document.querySelector("#notice2");
+            var co1 = document.querySelector("#cont1");
+            var co2 = document.querySelector("#cont2");
+            var co3 = document.querySelector("#cont3");
+
+            noti.addEventListener("click", function(){
+                noti.style.backgroundColor = "#37bdee"
+                hospi.style.backgroundColor = "#fff"
+                noti2.style.backgroundColor = "#fff"
+                noti.style.color = "#fff"
+                hospi.style.color = "#575756"
+                noti2.style.color = "#575756"
+                co1.style.zIndex = 100;
+                co2.style.zIndex = 10;
+                co3.style.zIndex = 10;
+            });
+            hospi.addEventListener("click", function(){
+                noti.style.backgroundColor = "#fff"
+                hospi.style.backgroundColor = "#37bdee"
+                noti2.style.backgroundColor = "#fff"
+                noti.style.color = "#575756"
+                hospi.style.color = "#fff"
+                noti2.style.color = "#575756"
+                co1.style.zIndex = 20;
+                co2.style.zIndex = 200;
+                co3.style.zIndex = 20;
+            });
+            noti2.addEventListener("click", function(){
+                noti.style.backgroundColor = "#fff"
+                hospi.style.backgroundColor = "#fff"
+                noti2.style.backgroundColor = "#37bdee"
+                noti.style.color = "#575756"
+                hospi.style.color = "#575756"
+                noti2.style.color = "#fff"
+                co1.style.zIndex = 20;
+                co2.style.zIndex = 20;
+                co3.style.zIndex = 200;
+            });
+        </script>
+    </body>
+</html>

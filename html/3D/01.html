@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <style>
+        /* 3D
+            display:flex처럼
+            container에서 perspective를 지정하고 이후 내부의 요소들을 지정할 수 있다.
+            기본적으로 1) container가 필요하고
+                      2) 실질적인 컨텐츠를 연결할 중간 요소가 필요하며
+                      3) 마지막으로 실질적인 3D요소가 있어야 한다.
+         */
+
+         .container{
+             perspective: 300px;
+             display: flex;
+             justify-content: space-around;
+             align-items: flex-end;
+             margin: 0 auto;
+             border: 1px solid dimgrey;
+             width: 800px;
+             height: 800px;
+         }
+         .container>div{
+             flex: 0 0 auto;
+             width: 100px;
+             height: 100px;
+             background: palevioletred;
+             font: bold 50px/100px arial, sans-serif;
+             text-align: center;
+             transform: rotate3d(0,1,0, 30deg);
+         }
+    </style>
+</head>
+<body>
+    <h1>3D</h1>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

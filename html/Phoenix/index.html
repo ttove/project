@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>휘닉스</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/index_web.css">
+    <link rel="stylesheet" media="only screen and (max-width:1199px)" href="css/index_mobile.css">
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+        @font-face {
+            font-family: 'JSDongkang-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //alret
+            $(".alert").click(function () {
+                alert("준비중입니다.")
+            });
+            // if ($(window).width() > 1199) {
+            //     $(".box1 div").css("width", $(window).width() / 2);
+            //     $(".box2 div").css("width", $(window).width() / 2);
+            // }
+            // $(window).resize(function () {
+            //     if ($(window).width() > 1199) {
+            //         $(".box1 div").css("width", $(window).width() / 2);
+            //         $(".box2 div").css("width", $(window).width() / 2);
+            //     }
+            // });
+        });
+    </script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return flase" onselectstart="return flase">
+    <div class="web mobile box">
+        <section class="box1">
+            <div class="pBack"></div>
+            <div class="pLogo_wrap">
+                <a class="alert"><img src="imgs/p_logo_gray.png" class="web pLogo"></a>
+                <a class="alert"><img src="imgs/pyeongchang.png" class="mobile pLogo"></a>
+            </div>
+        </section>
+        <section class="box2">
+            <div class="jBack"></div>
+            <div class="jLogo_wrap">
+                <a href="/Phoenix/main.html"><img src="imgs/j_logo_gray.png" class="web jLogo"></a>
+                <a href="/Phoenix/main.html"><img src="imgs/jeju.png" class="mobile jLogo"></a>
+            </div>
+        </section>
+    </div>
+    <img src="imgs/c_logo_90.png" alt="c_logo_90" class="cLogo">
+</body>
+
+</html>

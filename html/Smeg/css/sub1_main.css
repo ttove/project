@@ -1,0 +1,185 @@
+main{
+    width: 100%
+}
+main>div:first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../imgs/sub1_bg.png)no-repeat 0 0;
+    width: 100%;
+    height: 80rem;
+}
+main>div:first-child>h2{
+    margin: 30rem 0 30rem 65rem;
+    width: 100%;
+    font-size: 8rem;
+    font-weight: bold;
+    color: #534741;
+    cursor: default;
+}
+main>div:first-child>ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120rem;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.748);
+}
+main>div:first-child>ul>li{
+    width: 8rem;
+    font-size: 2rem;
+    line-height: 6rem;
+}
+main>div:first-child>ul>li:not(:first-child)>a{
+    color: #919191;
+}
+main>div:nth-child(2){
+    position: absolute;
+    top: 88rem;
+    left: 0;
+}
+main>div:nth-child(2)>section{
+    width: 192rem;
+    position: relative;
+}
+main>div:nth-child(2)>section>p{
+    position: absolute;
+    top: -1rem; left: 0;
+    width: 15rem;
+    margin-left: 90rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    background: #fff;
+}
+main>div:nth-child(2)>section>ul{
+    width: 145rem;
+    margin: 0 auto;
+    padding-top: 8rem;
+    border-top: 0.2rem solid #bfbfbf;
+}
+main>div:nth-child(2)>section>ul>li{
+    padding-left: 2rem;
+}
+main>div:nth-child(2)>section>ul>li>div{
+    position: relative;
+    float: left;
+    margin: 3.3rem;
+    width: 40rem;
+    height: 70rem;
+}
+main>div:nth-child(2)>section>ul>li>div:before{
+    position: absolute;
+    left: -.1rem;
+    top: -.1rem;
+    content: "";
+    width: .2rem;
+    height: 0;
+    background: #7363575c;
+    transition: all 0.5s ease;
+}
+main>div:nth-child(2)>section>ul>li>div:hover:before{
+    height: calc(100% - 4.5rem);
+}
+main>div:nth-child(2)>section>ul>li>div:after{
+    position: absolute;
+    right: -.1rem;
+    bottom: 4.6rem;
+    content: "";
+    width: .2rem;
+    height: 0;
+    background: #7363575c;
+    transition: all 0.5s ease;
+}
+main>div:nth-child(2)>section>ul>li>div:hover:after{
+    height: calc(100% - 4.5rem);
+}
+main>div:nth-child(2)>section>ul>li>div>p:before{
+    position: absolute;
+    right: -2.5rem;
+    top: -50.2rem;
+    content: "";
+    width: 0;
+    height: .2rem;
+    background: #7363575c;
+    transition: all 0.3s ease;
+}
+main>div:nth-child(2)>section>ul>li>div:hover>p:nth-of-type(1):before{
+    width: calc(100% + 5rem);
+}
+main>div:nth-child(2)>section>ul>li>div:first-child{
+    background: url(../imgs/uni.png) no-repeat 50% 25%;
+    border: 0.1rem solid #bfbfbf;
+}
+main>div:nth-child(2)>section>ul>li>div:nth-child(2){
+    background: url(../imgs/red.png) no-repeat 50% 25%;
+    border: 0.1rem solid #bfbfbf;
+}
+main>div:nth-child(2)>section>ul>li>div:nth-child(3){
+    background: url(../imgs/orange.png) no-repeat 50% 25%;
+    border: 0.1rem solid #bfbfbf;
+}
+main>div:nth-child(2)>section>ul>li>div:nth-child(4){
+    background: url(../imgs/cream.png) no-repeat 50% 25%;
+    border: 0.1rem solid #bfbfbf;
+}
+main>div:nth-child(2)>section>ul>li>div:nth-child(5){
+    background: url(../imgs/pink.png) no-repeat 50% 25%;
+    border: 0.1rem solid #bfbfbf;
+}
+main>div:nth-child(2)>section>ul>li>div:nth-child(6){
+    background: url(../imgs/green.png) no-repeat 50% 25%;
+    border: 0.1rem solid #bfbfbf;
+}
+main>div:nth-child(2)>section>ul>li>div:nth-child(7){
+    background: url(../imgs/white.png) no-repeat 50% 25%;
+    border: 0.1rem solid #bfbfbf;
+}
+main>div:nth-child(2)>section>ul>li>div:nth-child(8){
+    background: url(../imgs/black.png) no-repeat 50% 25%;
+    border: 0.1rem solid #bfbfbf;
+}
+main>div:nth-child(2)>section>ul>li>div:nth-child(9){
+    background: url(../imgs/blue.png) no-repeat 50% 25%;
+    border: 0.1rem solid #bfbfbf;
+}
+main>div:nth-child(2)>section>ul>li>div>p:nth-of-type(1){
+    position: absolute;
+    top: 50rem;
+    left: 2.5rem;
+    padding-top: 3rem;
+    width: 35rem;
+    text-align: center;
+    border-top: 0.1rem solid #bfbfbf;
+    font-size: 1.8rem;
+    line-height: 4rem;
+    font-weight: 800;
+}
+main>div:nth-child(2)>section>ul>li>div>p:nth-of-type(2){
+    position: absolute;
+    top: 59rem;
+    left: 2.3rem;
+    width: 35rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #5c5c5c;
+}
+main>div:nth-child(2)>section>ul>li>div>a{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4.5rem;
+    padding-top: 1.3rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    background: #666666;
+}
+main>div:nth-child(2)>section>ul>li>div>div>p{
+    font-size: 2rem;
+    font-weight: 900;
+}

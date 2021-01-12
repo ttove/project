@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while(true){
+            var num = prompt("시험점수를 입력하세요.");
+            if(num>=50 && num<=100){
+                break;
+            }else{
+                alert("다시입력해주세요.")
+            }
+        }
+        if(num>=90){
+            alert("A");
+        }else if(num>=80){
+            alert("B");
+        }else if(num>=70){
+            alert("C");
+        }else if(num>=60){
+            alert("D");
+        }else if(num>=50){
+            alert("F");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 임의의 숫자를 입력받으며 값을 입력받은 변수는 num1이라고 한다.
+        // 받은 숫자가 홀수이면 제곱을하고 짝수이면 2배로 만드는 함수를 작성하시오. 
+        // 값을 alert으로 띄우도록함
+        // 함수명은 test라고 한다.
+
+
+        while(true){
+            var value= test(prompt("숫자를 입력하세요."))
+            if(value){break;} 
+            alert("정확한 숫자를 입력하세요")
+        }
+        alert(value);
+
+        function test (num1){
+            num1 *= 1;
+            
+            var tmp;
+            if (num1 %2 == 0){
+                tmp = num1 * 2
+            } else if(num1 %2 == 1){
+                tmp = num1 * num1
+            } else{
+                return false;
+            }
+            return tmp;
+        }
+    </script>
+</body>
+</html>

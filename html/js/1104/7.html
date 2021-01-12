@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var x = 1;
+            var y = 2;
+            var z = 3;
+            var i = 4;
+            var tmp;
+
+            tmp = x;
+            x = y;
+            y = tmp;
+            y = z;
+            z = tmp;
+            z = i;
+            i = tmp;
+
+            alert(x);
+            alert(y);
+            alert(z);
+            alert(i);
+            
+        </script>
+    </body>
+</html>

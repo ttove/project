@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //모든 객체의 최상위 객체
+        var url = window.location.href //현재 체이지의 주소를 return함
+        console.log(url);
+        //현재 페이지의 파일명을 가지고 오기
+        var idx1 = url.lastIndexOf("/");
+        var idx2 = url.lastIndexOf(".");
+        var file = url.substring(idx1+1, idx2)
+        console.log(file)
+    </script>
+</body>
+</html>

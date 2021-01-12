@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMEG</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sub1_header.css">
+    <link rel="stylesheet" href="css/sub1_main.css">
+    <link rel="stylesheet" href="css/sub1_footer.css">
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+    
+        @font-face {
+            font-family: 'S-CoreDream-4Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    
+        html {
+            font-size: 62.5%;
+            font-family: 'S-CoreDream-4Regular', sans-serif;
+        }
+        body{
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (){
+
+        //menu
+            var me = document.querySelector("#menu");
+            var na = document.querySelector("#nav");
+            var num = 0;
+
+            me.addEventListener("click", function(){
+                num++
+                if(num%2 == 1){
+                    na.style.display = "block";
+                    me.firstChild.src = "imgs/menu_1.png"
+                }else if(num%2== 0){
+                    na.style.display = "none";
+                    me.firstChild.src = "imgs/menu.png"
+                }
+            });
+        
+        //dep
+            var menu1 = document.querySelector("#goods1");
+            var menu2 = document.querySelector("#goods2");
+            var menu3 = document.querySelector("#goods3");
+            var menu4 = document.querySelector("#goods4");
+            var menu5 = document.querySelector("#goods5");
+            var menu6 = document.querySelector("#goods6");
+            var menu7 = document.querySelector("#goods7");
+
+            var goods = document.querySelector("#dep1");
+
+            menu1.addEventListener("click", function () {
+                menu1.style.color = "#000"
+                menu2.style.color = "#919191"
+                menu3.style.color = "#919191"
+                menu4.style.color = "#919191"
+                menu5.style.color = "#919191"
+                menu6.style.color = "#919191"
+                menu7.style.color = "#919191"
+                goods.style.zIndex = 100;
+            });
+            menu2.addEventListener("click", function () {
+                menu1.style.color = "#919191"
+                menu2.style.color = "#000"
+                menu3.style.color = "#919191"
+                menu4.style.color = "#919191"
+                menu5.style.color = "#919191"
+                menu6.style.color = "#919191"
+                menu7.style.color = "#919191"
+            });
+            menu3.addEventListener("click", function () {
+                menu1.style.color = "#919191"
+                menu2.style.color = "#919191"
+                menu3.style.color = "#000"
+                menu4.style.color = "#919191"
+                menu5.style.color = "#919191"
+                menu6.style.color = "#919191"
+                menu7.style.color = "#919191"
+            });
+            menu4.addEventListener("click", function () {
+                menu1.style.color = "#919191"
+                menu2.style.color = "#919191"
+                menu3.style.color = "#919191"
+                menu4.style.color = "#000"
+                menu5.style.color = "#919191"
+                menu6.style.color = "#919191"
+                menu7.style.color = "#919191"
+            });
+            menu5.addEventListener("click", function () {
+                menu1.style.color = "#919191"
+                menu2.style.color = "#919191"
+                menu3.style.color = "#919191"
+                menu4.style.color = "#919191"
+                menu5.style.color = "#000"
+                menu6.style.color = "#919191"
+                menu7.style.color = "#919191"
+            });
+            menu6.addEventListener("click", function () {
+                menu1.style.color = "#919191"
+                menu2.style.color = "#919191"
+                menu3.style.color = "#919191"
+                menu4.style.color = "#919191"
+                menu5.style.color = "#919191"
+                menu6.style.color = "#000"
+                menu7.style.color = "#919191"
+            });
+            menu7.addEventListener("click", function () {
+                menu1.style.color = "#919191"
+                menu2.style.color = "#919191"
+                menu3.style.color = "#919191"
+                menu4.style.color = "#919191"
+                menu5.style.color = "#919191"
+                menu6.style.color = "#919191"
+                menu7.style.color = "#000"
+            });
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1><a href="http://ttove.dothome.co.kr/Smeg/index.html#"><img src="imgs/logo.png" alt="smeg logo"></a>
+            </h1>
+        </div>
+        <div>
+            <nav>
+                <p id="menu"><img src="imgs/menu.png" alt="메뉴"></p>
+                <div id="nav">
+                    <form action="test.jsp">
+                        <input type="search" name="search" placeholder="검색어를 입력해주세요." onfocus="this.placeholder=''"
+                            onblur="this.placeholder='검색어를 입력해주세요.'" size=10 maxlength=25>
+                        <button type="submit"><img src="imgs/search_n.png"></button>
+                    </form>
+                    <ul>
+                        <li>
+                            <a>REFRIGERATOR</a>
+                            <ul>
+                                <li><a href="http://ttove.dothome.co.kr/Smeg/sub1.html#">FAB5</a></li>
+                                <li><a class="alert">FAB10</a></li>
+                                <li><a class="alert">FAB28</a></li>
+                                <li><a class="alert">FAB30</a></li>
+                                <li><a class="alert">FAB32</a></li>
+                                <li><a class="alert">FAB50</a></li>
+                                <li><a class="alert">SMEG500</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>COFFEE</a>
+                            <ul>
+                                <li><a class="alert">밀크포머</a></li>
+                                <li><a class="alert">커피 그라인더</a></li>
+                                <li><a class="alert">반자동 커핀머신</a></li>
+                                <li><a class="alert">드림 커피머신</a></li>
+                                <li><a class="alert">빌트인 커피머신</a></li>
+                                <li><a class="alert">커피원두</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>KITCHEN</a>
+                            <ul>
+                                <li><a class="alert">인덕션</a></li>
+                                <li><a class="alert">빌트인 멀티오븐</a></li>
+                                <li><a class="alert">식기세척기</a></li>
+                                <li><a class="alert">세탁기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>LIVING</a>
+                            <ul>
+                                <li><a class="alert">토스터</a></li>
+                                <li><a class="alert">전기포트</a></li>
+                                <li><a class="alert">온도조절 전기포트</a></li>
+                                <li><a class="alert">믹서기(블렌더)</a></li>
+                                <li><a class="alert">핸드블렌더</a></li>
+                                <li><a class="alert">반죽기(스탠드믹서)</a></li>
+                                <li><a class="alert">착즙기</a></li>
+                                <li><a class="alert">Sicily is my Love</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>PROFESSIONAL</a>
+                            <ul>
+                                <li><a class="alert">업소용 식기세척기</a></li>
+                                <li><a class="alert">420MFHK</a></li>
+                                <li><a class="alert">45MFPGNK</a></li>
+                                <li><a class="alert">43K</a></li>
+                                <li><a class="alert">43GHK</a></li>
+                                <li><a class="alert">43XE</a></li>
+                                <li><a class="alert">43XEH</a></li>
+                                <li><a class="alert">오븐랙</a></li>
+                                <li><a class="alert">액세서리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>SMEG CLASS</a>
+                            <ul>
+                                <li><a class="alert">베이킹클래스 대체상품</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>CUSTOMER SERVICE</a>
+                            <ul>
+                                <li><a class="alert">NOTICE</a></li>
+                                <li><a class="alert">EVENT</a></li>
+                                <li><a class="alert">1:1문의</a></li>
+                                <li><a class="alert">FAQ</a></li>
+                                <li><a class="alert">스메그 리뷰</a></li>
+                                <li><a class="alert">SMEGazine</a></li>
+                                <li><a class="alert">매장안내</a></li>
+                                <li><a class="alert">스메그 패밀리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>COMPANY</a>
+                            <ul>
+                                <li><a class="alert">HISTORY</a></li>
+                                <li><a class="alert">DESIGNER</a></li>
+                                <li><a class="alert">TECHNOLOGY</a></li>
+                                <li><a class="alert">LOCATION</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h2>REFRIGERATOR</h2>
+            <ul>
+                <li><a id="goods1">FAB5</a></li>
+                <li><a id="goods2">FAB10</a></li>
+                <li><a id="goods3">FAB28</a></li>
+                <li><a id="goods4">FAB30</a></li>
+                <li><a id="goods5">FAB32</a></li>
+                <li><a id="goods6">FAB50</a></li>
+                <li><a id="goods7">SMEG500</a></li>
+            </ul>
+        </div>
+        <div>
+            <section id="dep1">
+                <p>FAB5</p>
+                <ul>
+                    <li>
+                        <div>
+                            <p>FAB5 유니언잭(스페셜)</p>
+                            <p>FAB5RDUJ3</p>
+                            <a>장바구니에 담기</a>
+                            <!-- <div>
+                                <p id="tit">0</p>
+                                <button id="btnP">+(증가)</button>
+                                <button id="btnM">-(감소)</button>
+                            </div> -->
+                        </div>
+                        <div>
+                            <p>FAB5 레드</p>
+                            <p>FAB5RRD3</p>
+                            <a>장바구니에 담기</a>
+                        </div>
+                        <div>
+                            <p>FAB5 오렌지</p>
+                            <p>FAB5ROR3</p>
+                            <a>장바구니에 담기</a>
+                        </div>
+                        <div>
+                            <p>FAB5 크림</p>
+                            <p>FAB5RCR3</p>
+                            <a>장바구니에 담기</a>
+                        </div>
+                        <div>
+                            <p>FAB5 핑크</p>
+                            <p>FAB5RPK3</p>
+                            <a>장바구니에 담기</a>
+                        </div>
+                        <div>
+                            <p>FAB5 파스텔그린</p>
+                            <p>FAB5RPG3</p>
+                            <a>장바구니에 담기</a>
+                        </div>
+                        <div>
+                            <p>FAB5 화이트</p>
+                            <p>FAB5RWH3</p>
+                            <a>장바구니에 담기</a>
+                        </div>
+                        <div>
+                            <p>FAB5 블랙</p>
+                            <p>FAB5RBL3</p>
+                            <a>장바구니에 담기</a>
+                        </div>
+                        <div>
+                            <p>FAB5 파스텔블루</p>
+                            <p>FAB5RPB3</p>
+                            <a>장바구니에 담기</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <section>
+                <ul>
+                    <li>
+                        <a>COMPANY</a>
+                    </li>
+                    <li>
+                        <a>이용약관</a>
+                    </li>
+                    <li>
+                        <a>개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a>협찬/제휴문의</a>
+                    </li>
+                    <li>
+                        <a>매장안내</a>
+                    </li>
+                    <li>
+                        <a>스메그 패밀리</a>
+                    </li>
+                    <li>
+                        <a>스메그 리퍼브샵</a>
+                    </li>
+                </ul>
+            </section>
+            <address>
+                <p>상호명 : (주)제이컬렉션대표 : 정태호주소 : 서울특별시 강남구 봉은사로 449(삼성동44-17) 밤부타워 2,3,4,5층</p>
+                <p>개인정보보호책임자 : 이한범사업자등록번호 : 206-86-72765통신판매신고번호 : 제 2018-서울강남-04317호대표메일 : smeginfo@smegkorea.com
+                </p>
+                <p>Copyright ⓒ 2017 SMEGKOREA Co., Ltd. All right reserved.</p>
+            </address>
+        </div>
+    </footer>
+</body>
+</html>

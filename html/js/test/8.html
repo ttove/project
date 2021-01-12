@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //1. 사용자에게 국어, 수학, 영어 점수를 받아 평균값을 구한뒤 수우미양가를 구분하시오.
+            // 2. 국어 - ko / 수학 - math / 영어 - en의 변수를 사용. 국어 수학 영어는 각 0~100까지의 숫자만 기입가능 -
+            // 틀렸을경우 오류문구 열기
+            // 3. 평균값 변수 ave 평균값 90~100 alert('수'); 70~89 alert('우'); 50~69 alert('미');
+            // 30~49 alert('양'); 나머지 alert('가');
+
+            var  avg = 0
+            while  (true ) {
+                var  ko = prompt ("국어점수를 입력하세요")*1 ;
+                if  (ko >= 0  && ko <= 100 ) {
+                    var  math = prompt ("수학점수를 입력하세요")*1 ;
+                    if  (math >= 0  && math <= 100 ) {
+                        var  en = prompt ("영어점수를 입력하세요")*1 ;
+                        if  (en >= 0  && en <= 100 ) {
+
+                            var  avg = (ko + math + en) / 3 ;
+
+                            if  (avg >= 90 ) {
+                                alert ("수");
+                            } else  if  (avg >= 70 ) {
+                                alert ("우");
+                            } else  if  (avg >= 50 ) {
+                                alert ("미");
+                            } else  if  (avg >= 30 ) {
+                                alert ("양");
+                            } else  {
+                                alert ("가");
+                            }
+                        } else  {
+                            alert ("0-100까지의 숫자를 입력하세요.");
+                        }
+                    } else  {
+                        alert ("0-100까지의 숫자를 입력하세요.");
+                    }
+                }else  {
+                        alert ("0-100까지의 숫자를 입력하세요.");
+            }
+        }
+        </script>
+    </body>
+</html>

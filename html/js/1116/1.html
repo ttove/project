@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(){
+            Car.prototype.engine = true;
+            Car.prototype.bbang = "빵빵";
+        }
+        //prototype은 Car 함수의 속성을 새롭게 연결시키는 객체의 모체
+        //
+        Car.prototype.getBbang = function(){
+            alert(this.bbang);
+        }
+        Car.prototype.door = 2;
+        var sportCar = new Car(); 
+        //{}: {engine:true, bbang:"빵빵",__proto__:Car.prototype}
+        sportCar.getBbang();
+
+        var truck = new Car();
+        truck.getBbang();
+        
+        var sedan = new Car();
+        sedan.getBbang();
+
+        Car.prototype.green = "환경자동차";
+        Car.prototype.bbabg = "뺑뺑";
+
+        sedan.bbang = "빵"
+
+        alert(sedan.green);
+        truck.getBbang();
+    </script>
+</body>
+</html>

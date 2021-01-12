@@ -1,0 +1,32 @@
+<!DOC TYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            var i = 1;
+            // var value = prompt("숫자입력") * 1;
+            var dan = 2;
+
+            while (dan < 10) {
+                if (i < 10) {
+                    gugudan(dan, i);
+                    i++;
+                } else {
+                    i = 1;
+                    dan = dan + 2;
+                }
+            }
+
+            function gugudan(dan, i) {
+                console.log(dan + "X" + i + "=" + dan * i);
+            }
+        </script>
+    </body>
+
+    </html>

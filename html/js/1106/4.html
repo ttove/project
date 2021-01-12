@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //임의 숫자 두개를 따로 입력하면, 두 숫자 중 작은 숫자에서 큰 숫자까지 합산을 출력하도록 한다.
+
+           sunNum(prompt("숫자 한 개를 입력하세요")*1, prompt("숫자를 입력하세요")*1)
+
+           function sunNum(num1,num2){
+               var temp = 0;
+               var sum = 0;
+               var process = ""
+
+               if(num1>num2){
+                   temp = num1;
+                   num1 = num2;
+                   num2 = temp;
+               }
+
+               while(true){
+                   if(sum == 0){
+                       process += num1;
+                   }else{
+                       process += "+"+num1;
+                   }
+                   sum = num1;
+                   num1++;
+                   if(num1>num2){
+                    break;
+                   }
+               }
+                   console.log(process +"="+sum)
+           }
+        </script>
+    </body>
+</html>

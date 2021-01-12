@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang=ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <style>
+        .cube{
+            perspective: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 800px; height: 800px;
+        }
+        .cube>div.stage{
+            transform-style: preserve-3d;
+            position: relative;
+            width: 400px; height: 400px;
+            transition: all .5s ease;
+        }
+        .cube>div.stage>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0; top: 0;
+            width: 400px; height: 400px;
+
+            font: bold 200px/200px arial,sans-serif;
+            color: darkgray;
+        }
+        .cube>div.stage>div.front{
+            transform: rotate(0deg) translateZ(200px);
+            background: rgba(212, 225, 250, 0.5);
+        }
+        .cube>div.stage>div.back{
+            transform: rotateY(180deg) translateZ(200px);
+            background: rgba(188, 210, 248, 0.5);
+        }
+        .cube>div.stage>div.top{
+            transform: rotateX(90deg) translateZ(200px);
+            background: rgba(136, 175, 247, 0.5);
+        }
+        .cube>div.stage>div.bottom{
+            transform: rotateX(-90deg) translateZ(200px);
+            background: rgba(100, 149, 237,.5);
+        }
+        .cube>div.stage>div.left{
+            transform: rotateY(90deg) translateZ(200px);
+            background: rgba(65, 127, 243, 0.5);
+        }
+        .cube>div.stage>div.right{
+            transform: rotateY(-90deg) translateZ(200px);
+            background: rgba(13, 95, 247, 0.5);
+        }
+
+        /* event */
+        #front:checked ~ .cube>div.stage{
+            transform: rotate3d(0,0,0, 0deg);
+         }
+         #back:checked ~ .cube>div.stage{
+            transform: rotate3d(0,1,0, 180deg);
+         }
+         #top:checked ~ .cube>div.stage{
+            transform: rotate3d(1,0,0, -90deg);
+         } 
+         #bottom:checked ~ .cube>div.stage{
+            transform: rotate3d(1,0,0, 90deg);
+         } 
+         #left:checked ~ .cube>div.stage{
+            transform: rotate3d(0,1,0, -90deg);
+         } 
+         #right:checked ~ .cube>div.stage{
+            transform: rotate3d(0,1,0, 90deg);
+         }  
+    </style>
+</head>
+<body>
+    <input type="radio" name="cube" id="front"><label for="front">1</label>
+    <input type="radio" name="cube" id="back"><label for="back">6</label>
+    <input type="radio" name="cube" id="top"><label for="top">2</label>
+    <input type="radio" name="cube" id="bottom"><label for="bottom">5</label>
+    <input type="radio" name="cube" id="left"><label for="left">3</label>
+    <input type="radio" name="cube" id="right"><label for="right">4</label>
+    <article class="cube">
+        <h1 class="hidden">cube</h1>
+        <div class="stage">
+            <div class="front">1</div>
+            <div class="back">6</div>
+            <div class="top">2</div>
+            <div class="bottom">5</div>
+            <div class="left">3</div>
+            <div class="right">4</div>
+        </div>
+    </article>
+</body>
+</html>

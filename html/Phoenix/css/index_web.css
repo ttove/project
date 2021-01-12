@@ -1,0 +1,85 @@
+.web {display: block;}
+.mobile{display: none;}
+
+div.box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+div.box>section.box1>div.pBack{
+    background: url(../imgs/p_bg_index.png) no-repeat;
+    background-position: 15% 5%;
+    width: 50vw;
+    height: 100vh;
+}
+div.box>section.box1>div.pLogo_wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff96;
+    width: 50vw;
+    height: 100vh;
+
+    opacity: 0;
+}
+div.box>section.box1>div.pLogo_wrap>a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div.box>section.box1:hover>div.pLogo_wrap{
+    opacity: 1;
+    transition: all .8s ease;
+}
+div.box>section.box1>div.pLogo_wrap>a:hover>img{
+    transform: scale(1.1,1.1);
+    transition: all .5s ease;
+}
+
+
+
+
+div.box>section.box2>div.jBack{
+    background: url(../imgs/j_bg_index.png) no-repeat;
+    background-position: 30% 25%;
+    width: 50vw;
+    height: 100vh;
+}
+div.box>section.box2>div.jLogo_wrap{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ffffff96;
+    width: 50vw;
+    height: 100vh;
+
+    opacity: 0;
+}
+div.box>section.box2>div.jLogo_wrap>a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+div.box>section.box2:hover>div.jLogo_wrap{
+    opacity: 1;
+    transition: all .8s ease;
+}
+div.box>section.box2>div.jLogo_wrap>a:hover>img{
+    transform: scale(1.1,1.1);
+    transition: all .5s ease;
+}
+
+
+img.cLogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}

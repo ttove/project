@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //임의의 숫자 4개를 prompt함수를 사용해서 저장한다. 그 숫자중 최소 값을 찾아내어 alert()을 사용해서 띄운다.
+
+            var num1 = prompt("숫자를 입력하세요");
+            var num2 = prompt("숫자를 입력하세요");
+            var num3 = prompt("숫자를 입력하세요");
+            var num4 = prompt("숫자를 입력하세요");
+
+            if (num1 < num2 && num1 < num3 && num1 < num4) {
+                alert(num1);
+            } else {
+                if (num2<num3 && num2<num4){
+                    alert(num2);
+                } else{
+                    if(num3<num4){
+                        alert(num3);
+                    }else{
+                        alert(num4);
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
