@@ -11,11 +11,11 @@
         @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
 
         @font-face {
-            font-family: 'S-CoreDream-4Regular';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
+    font-family: 'JSDongkang-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
     
 
         html {
@@ -28,22 +28,13 @@
             height: 100%;
             margin: 0px;
             padding: 0px;
-            font-family: 'S-CoreDream-4Regular', sans-serif;
+            font-family: 'JSDongkang-Regular', sans-serif;
             /* overflow: hidden; */
+            cursor: default;
         }
         body{
             overflow-x: hidden;
             overflow-y: hidden;
-        }
-
-        aside .on {
-            box-sizing: border-box;
-            margin-left: 4rem;
-            padding-top: 1rem;
-            width: 5rem;
-            height: 5rem;
-            border: .3rem solid #000;
-            border-radius: 50%;
         }
 
         #fullpage {
@@ -59,14 +50,22 @@
     <script>
         $(document).ready(function (){
             
-            $(window).on("scroll",function(){
-                if( $(window).scrollTop() <  $(window).height() ){
-                    $(".full2>aside").css("display","none");
-                } else {
-                    $(".full2>aside").show();
+            // $(window).on("scroll",function(){
+            //     if( $(window).scrollTop() <  $(window).height() ){
+            //         $(".full2>aside").css("display","none");
+            //     } else {
+            //         $(".full2>aside").show();
+            //     }
+            // });
+
+            $(window).scroll(function () {
+                var height = $(document).scrollTop();
+                if (height > 0) {
+                    $('aside.inner').addClass('fixinner');
+                } else if (height == 0) {
+                    $('aside.inner').removeClass('fixinner');
                 }
             });
-        
 
         //scroll
             $(function(){
@@ -131,12 +130,12 @@
                 }
             });
             $(window).ready(function () {
-                draw(80, '.pie-chart1', '#98A685');
-                draw(50, '.pie-chart2', '#98A685');
-                draw(30, '.pie-chart3', '#98A685');
-                draw(30, '.pie-chart4', '#98A685');
-                draw(30, '.pie-chart5', '#98A685');
-                draw(30, '.pie-chart6', '#98A685');
+                draw(80, '.pie-chart1', '#acb89c');
+                draw(50, '.pie-chart2', '#acb89c');
+                draw(30, '.pie-chart3', '#acb89c');
+                draw(30, '.pie-chart4', '#acb89c');
+                draw(30, '.pie-chart5', '#acb89c');
+                draw(30, '.pie-chart6', '#acb89c');
             });
 
             function draw(max, classname, colorname) {
@@ -158,23 +157,25 @@
 
 
             function replay() {
-                draw(80, '.pie-chart1', '#98A685');
-                draw(50, '.pie-chart2', '#98A685');
-                draw(30, '.pie-chart3', '#98A685');
-                draw(30, '.pie-chart4', '#98A685');
-                draw(30, '.pie-chart5', '#98A685');
-                draw(30, '.pie-chart6', '#98A685');
+                draw(80, '.pie-chart1', '#acb89c');
+                draw(50, '.pie-chart2', '#acb89c');
+                draw(30, '.pie-chart3', '#acb89c');
+                draw(30, '.pie-chart4', '#acb89c');
+                draw(30, '.pie-chart5', '#acb89c');
+                draw(30, '.pie-chart6', '#acb89c');
             }
         });
     </script>
 </head>
 <body>
     <div class="fullsection full1">
-        <img src="imgs/tit.png" alt="타이틀">
+        <div class="middle">
+            <h1>PORTFOLIO</h1>
+        </div>
     </div>
     <div class="fullsection full2">
-        <aside>
-            <ul>
+        <aside class="inner">
+            <ul class="infor">
                 <li>
                     <p>NAME</p>
                     <p>SoHyun Ahn</p>
@@ -199,41 +200,43 @@
                 <li>04</li>
             </ul>
         </aside>
-        <h1>PROFILE</h1>
-        <section>
-            <img src="imgs/profile.png" alt="프로필사진">
-            <ul>
-                <li>안소현</li>
-                <li>1998. 08. 13</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <div>
-                <p>20.05 - 21.01<span> 그린컴퓨터아카데미 스마트웹&앱디자인(웹디자인&웹퍼블리셔) UI/UX 콘텐츠제작 취업과정 수료</span></p>
-                <p>17.03 - 20.02<span> 신구대학교 유아교육과 졸업</span></p>
-                <p>14.03 - 17.02<span> 성일정보고등학교 인터넷경영과 졸업</span></p>
-            </div>
-        </section>
-        <section>
-            <h2>Licence</h2>
-            <div>
-                <p>20.08<span> 웹디자인기능사 (필기)</span></p>
-                <p>17.07<span> 자동차운전면허 2종보통</span></p>
-                <p>15.01<span> GTQ그래픽기술자격 2급</span></p>
-                <p>15.12<span> 정보기술자격(ITQ) 한글엑셀 A</span></p>
-                <p>14.01<span> 정보기술자격(ITQ) 한글파워포인트 A</span></p>
-            </div>
-        </section>
-        <section>
-            <h2>Skill</h2>
-            <div class="pie-chart pie-chart1"><span class="center">HTML</span></div>
-            <div class="pie-chart pie-chart2"><span class="center">CSS</span></div>
-            <div class="pie-chart pie-chart3"><span class="center">JavaScript</span></div>
-            <div class="pie-chart pie-chart4"><span class="center">jQuery</span></div>
-            <div class="pie-chart pie-chart5"><span class="center">PhotoShop</span></div>
-            <div class="pie-chart pie-chart6"><span class="center">illustration</span></div>
-        </section>
+        <div>
+            <h1>PROFILE</h1>
+            <section>
+                <img src="imgs/photo.png" alt="프로필사진">
+                <ul>
+                    <li>안소현</li>
+                    <li>1998. 08. 13</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Education</h2>
+                <div>
+                    <p>20.05 - 21.01<span> 그린컴퓨터아카데미 스마트웹&앱디자인(웹디자인&웹퍼블리셔) UI/UX 콘텐츠제작 취업과정 수료</span></p>
+                    <p>17.03 - 20.02<span> 신구대학교 유아교육과 졸업</span></p>
+                    <p>14.03 - 17.02<span> 성일정보고등학교 인터넷경영과 졸업</span></p>
+                </div>
+            </section>
+            <section>
+                <h2>Licence</h2>
+                <div>
+                    <p>20.08<span> 웹디자인기능사 (필기)</span></p>
+                    <p>17.07<span> 자동차운전면허 2종보통</span></p>
+                    <p>15.01<span> GTQ그래픽기술자격 2급</span></p>
+                    <p>15.12<span> 정보기술자격(ITQ) 한글엑셀 A</span></p>
+                    <p>14.01<span> 정보기술자격(ITQ) 한글파워포인트 A</span></p>
+                </div>
+            </section>
+            <section>
+                <h2>Skill</h2>
+                <div class="pie-chart pie-chart1"><span class="center">HTML</span></div>
+                <div class="pie-chart pie-chart2"><span class="center">CSS</span></div>
+                <div class="pie-chart pie-chart3"><span class="center">JavaScript</span></div>
+                <div class="pie-chart pie-chart4"><span class="center">jQuery</span></div>
+                <div class="pie-chart pie-chart5"><span class="center">PhotoShop</span></div>
+                <div class="pie-chart pie-chart6"><span class="center">illustration</span></div>
+            </section>
+        </div>
     </div>
     <div class="fullsection full3">
         <section>

@@ -6,35 +6,100 @@
     width: 100%;
     height: 100%;
     text-align: center;
+    background: #acb89c;
 }
-.full1>img{
-    margin-top: 2.5rem;
+.full1>div.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20% 30%;
+    box-sizing: content-box;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    box-shadow: .3rem .3rem .3rem 0 rgba(0,0,0,0.15);
 }
+.full1>div.middle>h1 {
+    font-size: 12rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #2c3e5036;
+    background-image: url(imgs/wave.png);
+    -webkit-background-clip: text;
+    animation: water 15s infinite;
+}
+@keyframes water {
+    from {
+        background-position: left 0 top 0;
+    }
+    to {
+        background-position: left 100rem top 0;
+    }
+}
+
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------
                                                                         full2
 ------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .full2 {
     width: 100%;
     height: 100%;
-    padding-left: 20%;
 }
-.full2>aside{  
-    width: 20%;
-    height: 100%;
-    position: fixed;
-    float: left;
-    z-index: 1;
-    top: 0;
+.full2>aside {    
+    top: 0; 
     left: 0;
-    background: #98A685;
-    overflow-x: hidden;
-    /* position: fixed;
-    float: left;
-    width: 20%;
+    z-index: 999; 
+    width: 20%; 
     height: 100%;
-    background: #98A685; */
+    /* min-width: 1000px;  */
+    /* margin: 0 auto;  */
+    background-color: #acb89c; 
+    /* box-sizing: border-box;  */
+} 
+.fixinner{ 
+    position:fixed; 
 }
-.pie-chart {
+.full2>aside .on {
+    box-sizing: border-box;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem 0;
+    border: .2rem solid #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+.full2>aside>ul.infor{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 65%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 50%;
+}
+.full2>aside>ul.infor>li{
+    font-size: 1.5rem;
+    line-height: 4.5rem;
+    color: #fff;
+}
+.full2>aside>ul.infor>li>p:last-child{
+    color: #4d4d4d;
+}
+.full2>aside>ul.sidePage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50%;
+}
+.full2>aside>ul.sidePage>li{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.full2>div{
+    width: 80%;
+    float: right;
+}
+/* .pie-chart {
     position: relative;
     display: inline-block;
     width: 10rem;
@@ -55,7 +120,7 @@ span.center {
     line-height: 3rem;
     font-size: 1.5rem;
     transform: translate(-50%, -50%);
-}
+} */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------
                                                                         full3
 ------------------------------------------------------------------------------------------------------------------------------------------------------- */
