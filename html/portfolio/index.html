@@ -58,15 +58,6 @@
             //     }
             // });
 
-            $(window).scroll(function () {
-                var height = $(document).scrollTop();
-                if (height > 0) {
-                    $('aside.inner').addClass('fixinner');
-                } else if (height == 0) {
-                    $('aside.inner').removeClass('fixinner');
-                }
-            });
-
         //scroll
             $(function(){
                 $("html, body").animate({"scrollTop":0},1)
@@ -128,6 +119,15 @@
                     $(".sidePage").children("li").eq(scrollEvnt.count)
                     .addClass("on").siblings().removeClass("on")
                 }
+                
+                $(window).scroll(function () {
+                    var height = $(document).scrollTop();
+                    if (height > 0) {
+                        $('aside.inner').addClass('fixinner');
+                    } else if (height == 0) {
+                        $('aside.inner').removeClass('fixinner');
+                    }
+                });
             });
             $(window).ready(function () {
                 draw(80, '.pie-chart1', '#acb89c');
@@ -203,7 +203,7 @@
         <div>
             <h1>PROFILE</h1>
             <section>
-                <img src="imgs/photo.png" alt="프로필사진">
+                <img src="imgs/circle.png" alt="프로필사진">
                 <ul>
                     <li>안소현</li>
                     <li>1998. 08. 13</li>
