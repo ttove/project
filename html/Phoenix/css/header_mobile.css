@@ -79,6 +79,9 @@ header>h1>a>img{
 }
 
 
+header>div>div#menu>nav>h1{
+    display: none;
+}
 header>div>div#menu>nav>ul{
     margin-top: 10rem;
 }
