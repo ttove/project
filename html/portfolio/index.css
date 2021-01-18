@@ -243,6 +243,9 @@
     line-height: 1.5rem;
     color: #4d4d4d;
 }
+.full3>section>img{
+    margin-bottom: 3rem;
+}
 .full3>section>a{
     margin: 0 1rem;
     padding: 1rem;
@@ -250,12 +253,23 @@
     font-size: 1.5rem;
     width: 10%;
     color: #979797;
+    cursor: pointer;
 
     opacity: 0;
     transition: all .8s ease;
 }
-.full3>section>img{
-    margin-bottom: 3rem;
+.full3>section>p:last-child{
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 20rem;
+    font-size: 1.3rem;
+    line-height: 2.6rem;
+    color: #ffffff;
+
+    transition: all 0.8s ease;
+}
+.full3>section:hover>p:last-child{
+    box-shadow: 20rem 0 0 0 rgba(106, 119, 86, 0.4) inset;
 }
 .full3>section:hover{
     background: #F4F4ED;
@@ -273,7 +287,7 @@
     color: #4d4d4d;
     font-weight: bold;
     transition: all .4s ease;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.426);
 }
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------
                                                                         full4

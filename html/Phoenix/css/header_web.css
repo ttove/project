@@ -6,6 +6,9 @@ header{
     height: 100%;
     z-index: 600;
 }
+header>h1{
+    display: none;
+}
 header>div{
     
 }

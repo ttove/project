@@ -3,7 +3,7 @@
                                                             part1
 --------------------------------------------------------------------------------------------------------------------------*/
 
-main>section.part1>div.box{
+/* main>section.part1>div.box{
     margin: 0 auto;
     margin-top: 5rem;
     box-sizing: border-box;
@@ -53,4 +53,4 @@ main.mobile>section.part1>div.box1>div:nth-of-type(3){
 }
 main.mobile>section.part1>div.box1>div:nth-of-type(4){
 
-}
+} */

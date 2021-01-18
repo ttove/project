@@ -2,12 +2,21 @@ html.open {
     overflow: hidden;
     position: relative;
 }
-header.mobile>div{
+header>div{
     position: fixed;
     z-index: 100;
 }
-header h1{
-    display: none;
+header>h1{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform:translate(-20%, 0);
+    display: block;
+    z-index: 100;
+}
+header>h1>a>img{
+    width: 50%;
+    margin: 0 auto;
 }
 .btn {
     width: 5rem;
@@ -70,19 +79,19 @@ header h1{
 }
 
 
-header.mobile>div>div#menu>nav>ul{
+header>div>div#menu>nav>ul{
     margin-top: 10rem;
 }
-header.mobile>div>div#menu>nav>ul>li{
+header>div>div#menu>nav>ul>li{
     padding: 3rem 0;
     font-size: 1.8rem;
 }
-header.mobile>div>div#menu>nav>ul>li:hover{
+header>div>div#menu>nav>ul>li:hover{
     transition: all .5s ease;
     transform: scale(1.2,1.2);
     font-weight: 800;
     color: #121f44;
 }
-header.mobile>div>div#menu>nav>ul>li>ul{
+header>div>div#menu>nav>ul>li>ul{
     display: none;
 }
