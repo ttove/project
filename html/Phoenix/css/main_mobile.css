@@ -76,12 +76,12 @@ main>section.part1>div.box1>div>div>button:focus{
     outline: none;
 }
 main>section.part1>div.box1>a{
-    width: 90%;
+    width: 30%;
     margin: 0 auto;
     margin-top: 3%;
     text-align: center;
     font-size: 2vh;
-    line-height: 3vh;
+    line-height: 4vh;
     color: #4d4d4d;
     border: .15rem solid #4d4d4d;
     /* color: #fff;
