@@ -6,13 +6,78 @@ main>section.part1>div.box{
     margin: 0 auto;
     margin-top: 3%;
     box-sizing: border-box;
-    width: 80%;
+    width: 90%;
+    height: 4vh;
     background: #121f44;
 }
 main>section.part1>div.box>h1{
-    font-size: 3vw;
-    line-height: 3vw;
+    font-size: 3vh;
+    line-height: 4vh;
     font-weight: 700;
     text-align: center;
     color: #fff;
+}
+main>section.part1>div.box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+main>section.part1>div.box1>div>p{
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    text-align: center;
+}
+main>section.part1>div.box1>div:first-child>input{
+    margin: 0 auto;
+    width: 45%;
+    font-size: 1.5rem;
+    line-height: 3vh;
+    text-align: center;
+    letter-spacing: .3rem;
+    border: .1rem solid #9d9d9d;
+}
+main>section.part1>div.box1>div:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main>section.part1>div.box1>div:nth-child(2)>div{
+    width: 45%;
+}
+main>section.part1>div.box1>div>div>p:first-child{
+    margin-top: 5%;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    text-align: center;
+}
+main>section.part1>div.box1>div>div>span{
+    font-size: 1.4rem;
+    line-height: 3rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+main>section.part1>div.box1>div>div>button{
+    font-size: 1.5rem;
+    margin: 0 10%;
+    background: none;
+    border: none;
+}
+main>section.part1>div.box1>div>div>button:focus{
+    outline: none;
+}
+main>section.part1>div.box1>a{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 2vh;
+    line-height: 3vh;
+    color: #4d4d4d;
+    border: .15rem solid #4d4d4d;
+    /* color: #fff;
+    background: #121f44; */
 }

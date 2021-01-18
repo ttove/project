@@ -10,7 +10,7 @@ main>section.part1>div.box{
     margin: 0 auto;
     margin-top: 3%;
     box-sizing: border-box;
-    width: 80%;
+    width: 90%;
     height: 3vw;
     background: #121f44;
 }
@@ -25,7 +25,7 @@ main>section.part1>div.box1{
     position: relative;
     display: flex;
     justify-content: space-around;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 3rem;
 }
@@ -35,21 +35,7 @@ main>section.part1>div.box1>div>p{
     line-height: 4rem;
     text-align: center;
 }
-main>section.part1>div.box1>div:nth-child(2){
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-main>section.part1>div.box1>div:nth-child(2)>div{
-    margin: 0 3rem;
-}
-main>section.part1>div.box1>div>div>p:first-child{
-    margin-bottom: .5rem;
-    font-size: 2rem;
-    line-height: 4rem;
-    text-align: center;
-}
-main>section.part1>div.box1>div>div:first-of-type>input{
+main>section.part1>div.box1>div:first-of-type>input{
     margin: 0 auto;
     width: 45%;
     height: 3vh;
@@ -59,12 +45,26 @@ main>section.part1>div.box1>div>div:first-of-type>input{
     letter-spacing: .3rem;
     border: .1rem solid #9d9d9d;
 }
-main>section.part1>div.box1>div>div:first-of-type>input:focus{
+main>section.part1>div.box1>div:first-of-type>input:focus{
     outline: none;
 }
-main>section.part1>div.box1>div>div:first-of-type>p>span{
+main>section.part1>div.box1>div:first-of-type>p>span{
     font-size: 1.5rem;
     line-height: 3rem;
+}
+main>section.part1>div.box1>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main>section.part1>div.box1>div:nth-child(2)>div{
+    margin: 0 2.3rem;
+}
+main>section.part1>div.box1>div>div>p:first-child{
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    line-height: 4rem;
+    text-align: center;
 }
 main>section.part1>div.box1>div>div>span{
     font-size: 1.5rem;
