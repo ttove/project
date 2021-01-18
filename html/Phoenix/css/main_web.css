@@ -48,17 +48,17 @@ main>section.part1>div.box1>div:first-of-type>input{
 main>section.part1>div.box1>div:first-of-type>input:focus{
     outline: none;
 }
-main>section.part1>div.box1>div:first-of-type>p>span{
-    font-size: 1.5rem;
-    line-height: 3rem;
+main>section.part1>div.box1>div:first-of-type>span{
+    margin: 0 1rem;
 }
 main>section.part1>div.box1>div:nth-child(2){
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    width: 48%;
 }
 main>section.part1>div.box1>div:nth-child(2)>div{
-    margin: 0 2.3rem;
+    margin: 0 3%;
 }
 main>section.part1>div.box1>div>div>p:first-child{
     margin-bottom: .5rem;
