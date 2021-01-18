@@ -40,6 +40,12 @@ main>section.part1>div.box1>div:first-child>input{
     letter-spacing: .3rem;
     border: .1rem solid #9d9d9d;
 }
+main>section.part1>div.box1>div:first-of-type>input:focus{
+    outline: none;
+}
+main>section.part1>div.box1>div:first-of-type>span{
+    margin: 0 1rem;
+}
 main>section.part1>div.box1>div:nth-child(2){
     display: flex;
     justify-content: space-around;
@@ -49,19 +55,19 @@ main>section.part1>div.box1>div:nth-child(2)>div{
     width: 45%;
 }
 main>section.part1>div.box1>div>div>p:first-child{
-    margin-top: 5%;
+    margin-top: 3%;
     font-size: 1.6rem;
     line-height: 3.2rem;
     text-align: center;
 }
 main>section.part1>div.box1>div>div>span{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 3rem;
     text-align: center;
     padding: 1rem 0;
 }
 main>section.part1>div.box1>div>div>button{
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 0 10%;
     background: none;
     border: none;
@@ -72,7 +78,7 @@ main>section.part1>div.box1>div>div>button:focus{
 main>section.part1>div.box1>a{
     width: 90%;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 3%;
     text-align: center;
     font-size: 2vh;
     line-height: 3vh;
@@ -80,4 +86,235 @@ main>section.part1>div.box1>a{
     border: .15rem solid #4d4d4d;
     /* color: #fff;
     background: #121f44; */
+}
+main>section.part1>div.box1>a:hover{
+    background-position: 0 0;
+    background: #121f44;
+    color: #fff;
+    transition: all .5s ease;
+}
+/*------------------------------------------------------------------------------------------------------------------------
+                                                            part2
+--------------------------------------------------------------------------------------------------------------------------*/
+main>section.part2{
+    width: 100%;
+    margin-top: 5%;
+}
+main>section.part2>h1{
+    margin: 4% 0 2% 0;
+    font-size: 3vh;
+    line-height: 3vw;
+    font-weight: 700;
+    text-align: center;
+}
+main>section.part2>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+}
+main>section.part2>div>div.a_sub1>div:first-of-type{
+    background: url(../imgs/Amenities1-1.png) no-repeat 0 0;
+    background-position: center;
+    width: 80vw;
+    height: 15vh;
+}
+main>section.part2>div>div.a_sub2>div:first-of-type{
+    background: url(../imgs/Amenities1-2.png) no-repeat 0 0;
+    background-position: center;
+    width: 80vw;
+    height: 15vh;
+}
+main>section.part2>div>div.a_sub3>div:first-of-type{
+    background: url(../imgs/Amenities1-3.png) no-repeat 0 0;
+    background-position: center;
+    width: 80vw;
+    height: 15vh;
+}
+main>section.part2>div>div.a_sub4>div:first-of-type{
+    background: url(../imgs/Amenities1-4.png) no-repeat 0 0;
+    background-position: center;
+    width: 80vw;
+    height: 15vh;
+}
+main>section.part2>div>div.a_sub5>div:first-of-type{
+    background: url(../imgs/Amenities1-5.png) no-repeat 0 0;
+    background-position: center;
+    width: 80vw;
+    height: 15vh;
+}
+main>section.part2>div>div{
+    position: relative;
+    margin-right: 1%;
+    margin-top: 2%;
+}
+main>section.part2>div>div>p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 15vh;
+    font-size: 2rem;
+    line-height: 15vh;
+    text-align: center;
+    color: #4d4d4d;
+    background: rgba(255, 255, 255, 0.652);
+
+    opacity: 0;
+}
+main>section.part2>div>div:hover>p{
+    opacity: 1;
+    transition: all .5s ease;
+}
+/*------------------------------------------------------------------------------------------------------------------------
+                                                            part3
+--------------------------------------------------------------------------------------------------------------------------*/
+main>section.part3{
+    position: relative;
+    width: 100%;
+    margin-top: 5%;
+    height: 50vw;
+}
+main>section.part3>h1{
+    margin-bottom: 3rem;
+    font-size: 3vh;
+    line-height: 3vw;
+    font-weight: 700;
+    text-align: center;
+}
+main>section.part3>ul{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+main>section.part3>ul>li{
+    display: none;
+    width: 90%;
+    margin: 0 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+main>section.part3>ul>li.on{
+    display: block;
+    z-index: 100;
+}
+main>section.part3>ul>li>img{
+    width: 63%;
+    height: 35vw;
+    float: left;
+}
+main>section.part3>ul>li>div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+    width: 37%;
+    height: 35vw;
+    box-sizing: border-box;
+    text-align: center;
+    background: #fff;
+    border: .1rem solid #9d9d9d;
+    border-left: none;
+}
+main>section.part3>ul>li>div>h2{
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 4rem;
+}
+main>section.part3>ul>li>div>p{
+    font-size: 1.5vh;
+    line-height: 3rem;
+}
+main>section.part3>ul>li>div>a{
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 45%;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    border: .1rem solid #9d9d9d;
+}
+main>section.part3>ul>li>div>a:hover{
+    background-position: 0 0;
+    background: #121f44;
+    color: #fff;
+    font-weight: 700;
+    transition: all .5s ease;
+}
+main>section.part3>p{
+    font-size: 3rem;
+}
+main>section.part3>p.btn_prev{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    transform: translate(-10%, -45%);
+}
+main>section.part3>p.btn_next{
+    position: absolute;
+    top: 45%;
+    right: 10%;
+    transform: translate(-10%, -45%);
+}
+/*------------------------------------------------------------------------------------------------------------------------
+                                                            part4
+--------------------------------------------------------------------------------------------------------------------------*/
+main>section.part4{
+    clear: both;
+}
+main>section.part4>div{
+    background: url(../imgs/Notice_bg.png) no-repeat 0 0;
+    background-position: center;
+    width: 100%;
+    height: 30vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main>section.part4>div>div{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+
+    width: 30%;
+    height: 20vh;
+    background: rgba(255, 255, 255, 0.678);
+
+}
+main>section.part4>div>div:hover{
+    transition: all .5s ease;
+    transform: scale(1.05,1.05);
+}
+main>section.part4>div>div:hover>h2{
+    font-weight: 800;
+    transition: all 1s ease;
+}
+main>section.part4>div>div>h2{
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+main>section.part4>div>div>p{
+    display: none;
+}
+
+#btnTop{
+    float: right;
+    position: sticky;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 5rem;
+    height: 5vh;
+    margin-top: 3vw;
+    box-sizing: border-box;
+    z-index: 501;
+    border: .1rem solid #121f44;
+    color: #121f44;
+    font-size: 1.8rem;
+    line-height: 5vh;
+    text-align: center;
+    border-radius: 10%;
 }
