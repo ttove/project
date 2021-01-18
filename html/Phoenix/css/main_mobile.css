@@ -205,11 +205,6 @@ main>section.part3>ul>li>img{
     height: 35vw;
     float: left;
 }
-@media screen and (max-width: 76.8rem){
-    main>section.part3>ul>li>div{
-        display: none;
-    }
-}
 
 main>section.part3>ul>li>div{
     display: flex;
