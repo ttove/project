@@ -1,0 +1,80 @@
+main{
+    width: 100%;
+}
+/*------------------------------------------------------------------------------------------------------------------------
+                                                            part1
+--------------------------------------------------------------------------------------------------------------------------*/
+.part1{
+    position: relative;
+    width: 100%;
+    margin-top: 5rem;
+}
+.part1>div:first-child{
+    position: relative;
+    margin-left: 9%;
+    background: url(../imgs/bg1.png) no-repeat 0 0;
+    height: 51.5rem;
+}
+.part1>div:nth-child(2){
+    margin-top: 3%;
+    background: #52776b;
+}
+.part1>div:nth-child(2)>ul{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 5rem;
+    text-align: center;
+}
+.part1>div:nth-child(2)>ul>li{
+    width: 20%;
+}
+.part1>div:nth-child(2)>ul>li:nth-child(1)>img{
+    position: absolute;
+    top: 50%; left: 13%;
+}
+.part1>div:nth-child(2)>ul>li:nth-child(1)>a{
+    display: none;
+    position: absolute;
+    top: 50%; left: 13%;
+}
+.part1>div:nth-child(2)>ul>li:nth-child(2)>img{
+    position: absolute;
+    top: 52%; right: 34%;
+}
+.part1>div:nth-child(2)>ul>li:nth-child(3)>img{
+    position: absolute;
+    top: 47%; right: 20%;
+}
+.part1>div:nth-child(2)>ul>li:hover>img{
+    transform: rotate( -20deg );
+    animation: ov_move1 3s infinite;
+}
+@keyframes ov_move1{
+    0%{transform: rotate(-20deg);}
+    25%{transform: rotate(0);}
+    50%{transform: rotate(-10deg);}
+    75%{transform: rotate(0);}
+    100%{transform: rotate(-20deg);}
+}
+/*------------------------------------------------------------------------------------------------------------------------
+                                                            part2
+--------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------
+                                                            part3
+--------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------
+                                                            part4
+--------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------
+                                                            part5
+--------------------------------------------------------------------------------------------------------------------------*/
