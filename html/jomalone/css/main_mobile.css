@@ -17,13 +17,13 @@
 }
 .section02>h1{
     text-align: center;
-    font-size: 3rem;
+    font-size: 3vw;
     line-height: 8rem;
 }
 .section02>p{
     margin-bottom: 6%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     line-height: 3.6rem;
     color: #999;
 }
@@ -39,8 +39,8 @@
 }
 .swiper-slide>p{
     margin-top: 3%;
-    font-size: 1.2rem;
-    line-height: 3rem;
+    font-size: 1.2vw;
+    line-height: 3vh;
     color: #4d4d4d;
 }
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -61,16 +61,16 @@
     text-align: center;
     transition: all 2s ease;
 }
-.section03>div>h1{
+.section03 h1{
     margin: 50% 0;
-    font-size: 2.5vh;
+    font-size: 3vw;
     line-height: 3rem;
 }
 .section03>div>p{
     display: none;
 }
 .section03>div>a{
-    font-size: 1vh;
+    font-size: 1.3vw;
 }
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------
                                                                         section04
