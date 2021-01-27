@@ -1,0 +1,45 @@
+footer{
+    width: 100%;
+    margin-top: 7%;
+    padding: 1%;
+    box-sizing: border-box;
+    background: #e9e0d2;
+}
+footer>div{
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 2%;
+    box-sizing: border-box;
+    background: #fff;
+}
+footer h1{
+    margin-bottom: 10%;
+
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+}
+footer li{
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    color: #666;
+}
+footer input{
+    margin-top: 25%;
+    border: none;
+    border-bottom: .2rem solid #000;
+}
+footer input:focus{
+    outline: none;
+}
+footer button{
+    font-weight: 700;
+    background: none;
+    border: none;
+}
+footer button:focus{
+    outline: none;
+}

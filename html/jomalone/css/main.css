@@ -1,0 +1,127 @@
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                        section01
+------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.section01{
+    width: 100%;
+    text-align: center;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                        section02
+------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.section02{
+    width: 100%;
+    margin-top: 5%;
+}
+.section02>h1{
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 8rem;
+}
+.section02>p{
+    margin-bottom: 6%;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 3.6rem;
+    color: #999;
+}
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-bottom: 2%;
+}
+.swiper-slide>p{
+    margin-top: 3%;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: #4d4d4d;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                        section03
+------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.section03{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-around;
+}
+.section03>img{}
+.section03>div{
+    text-align: center;
+    transition: all 2s ease;
+}
+.section03>div>h1{
+    margin-top: 50%;
+    font-size: 4rem;
+    line-height: 8rem;
+}
+.section03>div>p{
+    margin-top: 10%;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: #999;
+}
+.section03>div>p:nth-child(3){
+    margin-top: 5%;
+    margin-bottom: 25%;
+}
+.section03>div>a{
+    font-size: 1.3rem;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                        section04
+------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.section04{
+    width: 100%;
+    margin-top: 7%;
+    position: relative;
+}
+.section04>div{
+    background: url(../imgs/bg2.png) no-repeat 0 0;
+    width: 187rem;
+    height: 74rem;
+    margin: 0 auto;
+}
+.section04>h2{
+    position: absolute;
+    top: 40%;
+    left: -50%;
+
+    font-size: 4rem;
+    font-weight: 700;
+    transition: all 2s ease;
+}
+.section04>a{
+    position: absolute;
+    bottom: 42%;
+    left: -15%;
+
+    font-size: 1.8rem;
+    transition: all 2s ease;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                        section05
+------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.section05{
+    width: 100%;
+    margin-top: 7%;
+}
+.section05>ul{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    text-align: center;
+}
+.section05 img{
+    width: 100%;
+}
+.section05 p{
+    margin-top: 3%;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: #333;
+}
