@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../Swiper-3.4.2/dist/css/swiper.min.css">
+</head>
+<style>
+body {
+    
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin: 20px auto;
+}
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    width: 33.3%;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../Swiper-3.4.2/dist/js/swiper.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //swiper
+        var swiper = new Swiper('.swiper-container', {
+        scrollbar: '.swiper-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 30,
+        grabCursor: true
+    });
+        
+    })
+</script>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>ABOUT</li>
+                <li>PRODUCT</li>
+                <li>SHOP</li>
+                <li><img src="imgs/logo.png" alt="메인로고"></li>
+                <li>SEARCH</li>
+                <li>LOGIN</li>
+                <li>CART</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img src="imgs/bg1.png" alt="">
+        </section>
+        <section>
+            <h1>THE WINTER WARMER EDIT</h1>
+            <p>Choose a Fragrant Favourite from our Cologne Intense Collection</br>
+                to keep you cosy throughout the cooler months.</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="imgs/goods1.png" alt="">
+                        <p>Vetiver & Golden Vanilla</br>Cologne Intense</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/goods2.png" alt="">
+                        <p>Myrrh & Tonka Cologne</br>Intense</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/goods3.png" alt="">
+                        <p>Velvet Rose & Oud</br>Cologne Intense</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/goods4.png" alt="">
+                        <p>Oud & Bergamot</br>Cologne Intense</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/goods5.png" alt="">
+                        <p>Jasmine Sambac & Marigold</br>Cologne Intense</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/goods6.png" alt="">
+                        <p>Tuberose Angelica Cologne</br>Intense</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/goods7.png" alt="">
+                        <p>Dark Amber & Ginger Lily</br>Cologne Intense</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/goods8.png" alt="">
+                        <p>Bronze Wood & Leather Cologne</br>Intense</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/goods9.png" alt="">
+                        <p>Myrrh & Tonka Body Crème</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/goods10.png" alt="">
+                        <p>Myrrh & Tonka Shower Oil
+                        </p>
+                    </div>
+                </div>
+                <!-- Add Scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
