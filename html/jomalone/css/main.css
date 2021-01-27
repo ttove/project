@@ -106,7 +106,13 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .section05{
     width: 100%;
-    margin-top: 7%;
+    margin-top: 5%;
+}
+.section05>h1{
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2%;
 }
 .section05>ul{
     width: 80%;
@@ -124,4 +130,9 @@
     font-size: 1.7rem;
     line-height: 3rem;
     color: #333;
+}
+.section05 img:hover~p{
+    transition: all .8s ease;
+    transform: scale(1.2,1.2);
+    font-weight: 700;
 }
