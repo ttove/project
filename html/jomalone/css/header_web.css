@@ -1,18 +1,24 @@
 header{
     width: 100%;
 }
-header>nav{
+header>nav.web{
     width: 100%;
     margin: 2% 0;
 }
-header>nav>ul{
+header>nav.web>ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-header>nav>ul>li{
+header>nav.web>ul>li{
     font-size: 1.3rem;
 }
-header>nav>ul>li:hover{
+header>nav.web>ul>li:hover{
     font-weight: 700;
+}
+header>h1{
+    display: none;
+}
+header>.mobile{
+    display: none;
 }

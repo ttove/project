@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jomalone</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/header_web.css">
+    <link rel="stylesheet" media="only screen and (max-width:1199px)" href="css/header_mobile.css">
+    <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/main_web.css">
+    <link rel="stylesheet" media="only screen and (max-width:1199px)" href="css/main_mobile.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="../Swiper-3.4.2/dist/css/swiper.min.css">
 </head>
@@ -82,29 +84,50 @@
     });
 
     //scrollEvt
-    $(window).on("scroll",function(){
-                    var sct = $(window).scrollTop();
-                    console.log(sct);
+    // $(window).on("scroll",function(){
+    //                 var sct = $(window).scrollTop();
+    //                 console.log(sct);
 
-                    if(sct >= 2000 && sct < 2200){
-                        $(".Event").css("opacity","1");
-                    }else if(sct<1500){
-                        $(".Event").css("opacity","0");
-                    }
+    //                 if(sct >= 2000 && sct < 2200){
+    //                     $(".Event").css("opacity","1");
+    //                 }else if(sct<1500){
+    //                     $(".Event").css("opacity","0");
+    //                 }
                     
-                    if(sct >= 2300){
-                        $(".Event02_1").css("left","15%");
-                        $(".Event02_2").css("left","33%");
-                    }else if(sct<2300){
-                        $(".Event02_1").css("left","-15%");
-                        $(".Event02_2").css("left","-50%");
-                    }
-                });
+    //                 if(sct >= 2300){
+    //                     $(".Event02_1").css("left","15%");
+    //                     $(".Event02_2").css("left","33%");
+    //                 }else if(sct<2300){
+    //                     $(".Event02_1").css("left","-15%");
+    //                     $(".Event02_2").css("left","-50%");
+    //                 }
+    //             });
+    
+        //모바일 메뉴버튼
+        var i = document.querySelector('.inner');
+        var m = document.querySelector('.menuM');
+        var num = 0;
+        const icons = document.querySelectorAll('.icon');
+
+        icons.forEach(icon => {
+            icon.addEventListener('click', (event) => {
+                num++;
+                if (num % 2 == 1) {
+                    i.style.display = "block";
+                    m.style.background = "#f7f6f2";
+                }else if(num % 2 == 0) {
+                    i.style.display = "none"
+                    m.style.background = "none";
+                }
+                icon.classList.toggle("open");
+            });
+        });
     })
 </script>
 <body>
     <header>
-        <nav>
+        <!-- web menu -->
+        <nav class="web">
             <ul>
                 <li>ABOUT</li>
                 <li>PRODUCT</li>
@@ -115,6 +138,26 @@
                 <li>CART</li>
             </ul>
         </nav>
+
+        <!-- mobile menu -->
+        <h1><a href="https://ttove.github.io/project/html/jomalone/"></a><img src="imgs/logo.png" alt="메인로고"></h1>
+        <section class="mobile menuM">
+            <div class="icon nav-icon-8">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> 
+            <nav class="inner">
+                <ul class="infor">
+                    <li>ABOUT</li>
+                    <li>PRODUCT</li>
+                    <li>SHOP</li>
+                    <li>SEARCH</li>
+                    <li>LOGIN</li>
+                    <li>CART</li>
+                </ul>
+            </nav>
+        </section>
     </header>
     <main>
         <section class="section01">
@@ -182,7 +225,9 @@
             </div>
         </section>
         <section class="section04">
-            <div></div>
+            <div>
+                <img src="imgs/bg2.png" alt="">
+            </div>
             <h2 class="Event02_1">ZARA Emotions Collection by Jo Loves</h2>
             <a class="Event02_2">MORE</a>
         </section>
