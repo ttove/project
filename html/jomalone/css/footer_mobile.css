@@ -1,0 +1,50 @@
+footer{
+    width: 100%;
+    margin-top: 7%;
+    padding: 1%;
+    box-sizing: border-box;
+    background: #e9e0d2;
+}
+footer>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 2%;
+    box-sizing: border-box;
+    background: #fff;
+}
+footer h1{
+    margin-top: 2%;
+    font-size: 1.5vw;
+    line-height: 3vh;
+    font-weight: 700;
+}
+footer ul{
+    display: flex;
+}
+footer li{
+    flex: 0 1 15vw;
+    font-size: 1.2vw;
+    line-height: 2.5vh;
+    color: #666;
+}
+footer input{
+    margin-top: 5%;
+    border: none;
+    border-bottom: .2rem solid #000;
+}
+footer input:focus{
+    outline: none;
+}
+footer button{
+    font-size: 1.3vw;
+    font-weight: 700;
+    background: none;
+    border: none;
+}
+footer button:focus{
+    outline: none;
+}
