@@ -1,0 +1,334 @@
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                        full1
+------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.full1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #acb89c;
+}
+.full1>div.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20% 30%;
+    box-sizing: content-box;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    box-shadow: .3rem .3rem .3rem 0 rgba(0,0,0,0.15);
+}
+.full1>div.middle>h1 {
+    font-size: 12vh;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #2c3e5036;
+    background-image: url(imgs/wave.png);
+    -webkit-background-clip: text;
+    animation: water 15s infinite;
+}
+@keyframes water {
+    from {
+        background-position: left 0 top 0;
+    }
+    to {
+        background-position: left 100rem top 0;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                        full2
+------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.full2 {
+    width: 100%;
+    height: 100%;
+    margin-top: 12.1%;
+}
+.full2>section>aside {    
+    top: 0; 
+    left: 0;
+    z-index: 999; 
+    width: 20%; 
+    height: 100%;
+    /* min-width: 1000px;  */
+    /* margin: 0 auto;  */
+    background-color: #acb89c; 
+    /* box-sizing: border-box;  */
+}
+.nav-icon-8{
+    display: none;
+}
+.fixinner{ 
+    position:fixed; 
+}
+.full2>section>aside .on {
+    box-sizing: border-box;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem 0;
+    border: .2rem solid #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+.full2>section>aside>ul.infor{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 65%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 50%;
+}
+.full2>section>aside>ul.infor>li{
+    font-size: 1.5rem;
+    line-height: 4.5rem;
+    color: #fff;
+}
+.full2>section>aside>ul.infor>li>p:last-child{
+    color: #4d4d4d;
+}
+.full2>section>aside>ul.sidePage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50%;
+}
+.full2>section>aside>ul.sidePage>li{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.full2>div{
+    width: 80%;
+    height: 100%;
+    float: right;
+    padding: 3%;
+    box-sizing: border-box;
+}
+.full2>div>h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.full2>div>section:nth-child(2){
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 65%;
+    margin-top: 10%;
+}
+.full2>div>section:nth-child(2)>ul>li{
+    font-size: 1.7rem;
+    line-height: 4rem;
+    font-weight: 800;
+    text-align: center;
+    color: #4d4d4d;
+}
+.full2>div>section:nth-child(2)>a{
+    padding: 0 2%;
+    font-size: 1.5vh;
+    line-height: 2vw;
+    color: #fff;
+    background: #9d9d9d;
+}
+.full2>div>section:nth-child(3){
+    /* float: left; */
+    margin: -1% 4% 0 40%;
+}
+.full2>div>section>h2{
+    font-size: 2.3rem;
+    line-height: 4vh;
+    font-weight: 700;
+    border-bottom: .2rem solid #F4F4ED;
+}
+.full2>div>section:nth-child(3)>div>p{
+    padding: 2rem 0;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 700;
+}
+.full2>div>section:nth-child(3)>div>p>span{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 200;
+    color: #4d4d4d;
+}
+
+.full2>div>section:nth-child(4){
+    /* float: left; */
+    margin: 3% 5% 1.5% 40%;
+}
+.full2>div>section:nth-child(4)>div>p{
+    padding: 2rem 0;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 700;
+}
+.full2>div>section:nth-child(4)>div>p>span{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 200;
+    color: #4d4d4d;
+}
+
+.full2>div>section:nth-child(5){
+    margin: 3% 5% 0 40%;
+}
+.full2>div>section:nth-child(5)>div.pie-chart{
+    margin-right: 3%;
+    margin-top: 2%;
+    position: relative;
+    display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+.full2>div>section:nth-child(5)>div>span.center{
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    padding: 30% 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.3vh;
+    line-height: 3vh;
+    color: #4d4d4d;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                        full3
+------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.full3 {
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.full3>section{
+    width: 25%;
+    height: 100%;
+    padding: 10% 2%;
+    box-sizing: border-box;
+
+    border-left: .1rem solid #F4F4ED;   
+}
+.full3>section>h2{
+    padding-bottom: 2rem;
+    font-size: 9.5rem;
+    font-weight: bolder;
+    color: #5c5b5b;
+}
+.full3>section>p:nth-child(2){
+    font-size: 2rem;
+    line-height: 4rem;
+    font-weight: bold;
+}
+.full3>section>p:nth-child(3){
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #4d4d4d;
+}
+/* .full3>section:last-child>p:nth-child(3){
+    margin-bottom: 8rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #4d4d4d;
+} */
+.full3>section>img{
+    width: 100%;
+    margin-bottom: 2%;
+}
+.full3>section>a{
+    margin: 0 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    line-height: 3vw;
+    width: 10%;
+    color: #979797;
+    cursor: pointer;
+
+    opacity: 0;
+    transition: all .8s ease;
+}
+.full3>section>p:last-child{
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 20rem;
+    font-size: 1.3vh;
+    line-height: 3vh;
+    color: #ffffff;
+
+    transition: all 0.8s ease;
+}
+.full3>section:hover>p:last-child{
+    box-shadow: 20rem 0 0 0 rgba(106, 119, 86, 0.4) inset;
+}
+.full3>section:hover{
+    background: #F4F4ED;
+    transform: scale(1.05,1.05);
+    transition: all .8s ease;
+}
+.full3>section:hover>h2{
+    color: #6A7756;
+    transition: all .4s ease;
+}
+.full3>section:hover>a{
+    opacity: 1;
+}
+.full3>section>a:hover{
+    color: #4d4d4d;
+    font-weight: bold;
+    transition: all .4s ease;
+    background: rgba(255, 255, 255, 0.426);
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                        full4
+------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.full4 {
+    width: 80%;
+    height: 100%;
+    float: right;
+}
+.full4>p{
+    margin-top: 25%;
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    color: #e8e8cd;
+}
+.full4>p>span{
+    color: #6A7756;
+}
+.full4>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 6%;
+    font-size: 2rem;
+}
+.full4>div>a{
+    color: #979797;
+}
+.full4>div>a:hover{
+    color: #4d4d4d;
+    font-weight: bold;
+    transition: all .4s ease;
+}
