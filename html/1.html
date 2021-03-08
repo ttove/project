@@ -1,43 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        :root {
+            /* color */
+            --main-color:rgba(175, 233, 16, 0.664);
+            --sub-color:rgba(27, 124, 87, 0.664);
+            --sub2-color:rgba(255, 0, 179, 0.664);
+
+            /* fontsize */
+            --fontsize-title: 50px;
+            --fontsize-sub: 30px;
+            --fontsize-sub2: 15px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #s1 {
+            background-color: yellowgreen;
+            color: var(--sub2-color);
+        }
+
+        #s2 {
+            background-color: sandybrown;
+        }
+
+        #s3 {
+            background-color: thistle;
+        }
+
+        #s4 {
+            background-color: steelblue;
+        }
+    </style>
 </head>
-<style>
-    section{
-        width: 100vw;
-        height: 100vh;
-    }
-    #s1{
-        color: yellowgreen;
-    }
-    #s2{
-        color: #d3cd18;
-    }
-    #s3{
-        color: thistle;
-    }
-    #s4{
-        color: steelblue;
-    }
-</style>
+
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#s1">aaaaa</a></li>
+                <li><a href="#s2">bbbbb</a></li>
+                <li><a href="#s3">ccccc</a></li>
+                <li><a href="#s4">ddddd</a></li>
             </ul>
         </nav>
     </header>
-    <section id="s1"></section>
+    <section id="s1">
+        김재홍
+    </section>
     <section id="s2"></section>
     <section id="s3"></section>
     <section id="s4"></section>
 </body>
+
 </html>

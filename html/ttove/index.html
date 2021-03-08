@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../Swiper-3.4.2/dist/css/swiper.min.css">
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+        @font-face {
+            font-family: 'S-CoreDream-4Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            font-family: 'JSDongkang-Regular', sans-serif;
+            /* overflow: hidden; */
+            cursor: default;
+        }
+        /* swiper */
+    .swiper-container {
+        width: 80%;
+        height: 100%;
+        margin: 2rem auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        width: 25%;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../Swiper-3.4.2/dist/js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //swiper
+            var swiper = new Swiper('.swiper-container', {
+                scrollbar: '.swiper-scrollbar',
+                scrollbarHide: true,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                spaceBetween: 30,
+                grabCursor: true
+            });
+        })
+    </script>
+</head>
+
+<body style="overflow-x:hidden">
+    <section class="range1">
+        <h1>WEB DESIGNER</h1>
+        <p>PORTFOLIO</p>
+        <ul>
+            <li>CONTACT</li>
+            <li>AHN SO HYUN</li>
+            <li>010 . 4269 . 5040</li>
+            <li>tto_ve@naver.com</li>
+        </ul>
+        <a href="안소현_이력서,자기소개서.pdf" download>이력서/ 자기소개서</a>
+    </section>
+    <section class="range2">
+        <div class="part1">
+            <h1>1) WED DESIGN</h1>
+            <ul>
+                <li>DESIGN TOOL
+                    <ul>
+                        <li>illustration</li>
+                    </ul>
+                </li>
+                <li>PROGRAMS
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>jQUERY</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="imgs/smeg.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/lotte.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/phoenix.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/jomalone.png" alt="">
+                    </div>
+                </div>
+                <!-- Add Scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
