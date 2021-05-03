@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Insert title here(수강신청)</title>
+        <link rel="shortcut icon" type="image/x-con" href="resources/common/imgs/favicon_24.png">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="resources/common/css/reset.css">
+        <link rel="stylesheet" href="resources/common/css/common_indigo.css">
+        <link rel="stylesheet" href="resources/common/css/cus0001.css">
+        <link rel="stylesheet" href="resources/common/css/layout._indigo.css">
+        <link rel="stylesheet" href="resources/common/css/header.css">
+        <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
+        <link rel="stylesheet" href="resources/common/css/common.css">
+        <link rel="stylesheet" href="resources/common/css/Enrolment.css">
+        
+        <style>
+            html {
+                font-size:62.5%;
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="resources/common/js/jquery-ui.css">
+
+        <script src="resources/common/js/jquery-ui.js"></script>
+
+        <script src="resources/common/js/jquery-ui.min.js"></script>
+
+        <script src="resources/common/js/datepicker-ko.js"></script>
+        <script>
+            var flag = true;
+            var len = 0;
+            $(function(){
+                $(".ic_arr").click(function(){
+                    if(flag){
+                        $(".category_contents").css("display","block");
+                        $("div.searchHelp").css("display","none");
+                        flag = false;
+                    }else{
+                        $(".category_contents").css("display","none");
+                        $("div.searchHelp").css("display","none");
+                        flag = true;
+                    }
+                    
+                });
+
+                $(".category_contents").children("ul").children("li").mouseover(function(){
+                    len = $(this).index();
+                    $(this).addClass("on").siblings().removeClass("on");
+                    $("div.searchHelp").css("display","none");
+                    // $(this).children().eq(len).addClass("on").siblings().removeClass("on");
+                });//nav end
+
+
+                $("#gnb_search").click(function(){
+                    $("div.searchHelp").css("display","block");
+                   
+                });
+
+                $(".searchend").click(function(){
+                    $("div.searchHelp").css("display","none");
+                });
+                
+                // $("html").click(function(){
+                //     $("div.searchHelp").css("display","none");
+                // });
+
+            }); 
+        </script>
+        <script type="text/javascript">
+            //보이기
+            function show() {
+                document
+                    .getElementById("show")
+                    .style
+                    .display = "block";
+            }
+
+            //숨기기
+            function hide() {
+                document
+                    .getElementById("show")
+                    .style
+                    .display = "none";
+            }
+        </script>
+        <script type="text/javascript">
+
+            $(function(){
+            
+                $("#startdate").datepicker({
+            
+                    showOn: "both",
+            
+                    buttonImage: "resources/common/imgs/datepicker.png",
+            
+                    buttonImageOnly: true,
+            
+                    buttonText: "Select date"
+            
+                });
+                $("#enddate").datepicker({
+                    
+                    showOn: "both",
+            
+                    buttonImage: "resources/common/imgs/datepicker.png",
+            
+                    buttonImageOnly: true,
+            
+                    buttonText: "Select date"
+            
+                });
+            
+            });
+            
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="gnb global is-ready">
+                <!-- Global Menu -->
+                <div class="gnb__inner">
+                    <ul class="utility">
+                        <li>
+                            <a
+                                class="text_link"
+                                href="loginf"
+                                target="_self">로그인</a>
+                        </li>
+                        <li>
+                            <a
+                                class="text_link"
+                                href="joinf"
+                                target="_self">회원가입</a>
+                        </li>
+                        <li>
+                            <a
+                                class="text_link"
+                                href="/cs/map/mapMain?p_menu=MzY0I0dMT0JBTA==&amp;p_gubun=Qw=="
+                                target="_blank">마이페이지</a>
+                        </li>
+                        <!-- Quick Link -->
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MENU::JSTL -->
+            <div class="gnb type2 is-ready" data-opentype="box">
+                <div class="gnb_row" style="height: 37px;">
+                    <div class="gnb__inner">
+                        <h1 class="h1_logo">
+                            <a href="home">
+                                <img
+                                    src="resources/common/imgs/logo_01.png"
+                                    alt="원스톱캠퍼스">
+                            </a>
+                        </h1>
+                        <div class="gnb_search_fd" data-js="gnb__total-search">
+                            <form
+                                name="topSearchForm"
+                                id="topSearchForm"
+                                method="get"
+                                onsubmit="return srchKwd(this);"
+                                action="/search">
+                                <input
+                                    type="hidden"
+                                    id="top_siteAppntSrcwdNm"
+                                    name="siteAppntSrcwdNm"
+                                    value="Live 강의듣고 &quot;갤럭시Tab 평생소장&quot;">
+                                <input type="hidden" id="top_siteRalSrcwdNm" name="siteRalSrcwdNm" value="갤럭시탭">
+                                <input type="hidden" name="kwd" value="">
+
+                                <fieldset>
+                                    <legend class="screen--out">통합검색</legend>
+                                    <label class="skip" for="gnb_search">검색어 입력</label>
+                                    <input
+                                        type="text"
+                                        data-search-kwd="gnb_search"
+                                        id="gnb_search"
+                                        name="input_kwd"
+                                        role=""
+                                        class="inp_sch"
+                                        data-js="search__input"
+                                        value=""
+                                        autocomplete="off">
+                                    <button type="button" class="btn_gnb_search--reset" data-js="gnb__search-reset">
+                                        <span class="screen--out">검색어 초기화</span>
+                                    </button>
+                                    <button type="button" class="btn_gnb_search--open" data-js="gnb__search-open">
+                                        <span class="screen--out">검색도우미</span>
+                                        <span class="screen--out" data-js="helper-status">켜기</span>
+                                    </button>
+                                    <button type="button" class="btn_gnb_search" data-js="search__submit">검색</button>
+                                    <input type="hidden" id="category" name="category" value="">
+                                </fieldset>
+                            </form>
+                            <div class="searchHelp">
+                                <ul>
+                                    <li>교육과정</li>
+                                    <li>콘텐츠</li>
+                                    <li>자동완성 키워드</li>
+                                </ul>
+                                <p>해당 교육과정이 없습니다.</p>
+                                <p class="searchend">검색도우미 끄기</p>
+                            </div>
+                        </div>
+                        <ul class="utility">
+
+                            <li class="gnb-utility" data-js="toggle">
+                                <button
+                                    type="button"
+                                    class="btn_gnb_cs"
+                                    data-js="toggle__anchor"
+                                    data-autoclose="true"
+                                    aria-controls="uiToggle-1"
+                                    aria-expanded="false"
+                                    aria-label="열기">고객지원센터</button>
+                                <div
+                                    class="list list--arrow list--bbs"
+                                    data-js="toggle__panel"
+                                    id="uiToggle-1"
+                                    aria-hidden="true"
+                                    style="display: none;">
+                                    <!-- Util Menu::INFO1 -->
+                                    <ul>
+                                        <li>
+                                            <a
+                                                class="list__link"
+                                                href="/common/board/boardMstr/124386?p_menu=MSNJTkZPMQ==&amp;p_gubun=Qw=="
+                                                target="_self">공지사항</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="list__link"
+                                                href="/st/om/faq/faqList/EC/CUS0001?p_menu=MyNJTkZPMQ==&amp;p_gubun=Qw=="
+                                                target="_self">FAQ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="gnb_row">
+                    <div class="gnb__inner">
+                        <div
+                            class="gnb_cate"
+                            data-js="gnb_cate"
+                            data-maxheigt="466"
+                            data-cate-json="/site/menu/selectCategoryMenuList"
+                            data-ajaxtype="POST">
+                            <button
+                                type="button"
+                                class="ic_arr"
+                                data-js="gnb_cate__anchor"
+                                aria-controls="uiToggle-2"
+                                aria-expanded="false"
+                                aria-label="열기">
+                                <span>
+                                    <span></span>
+                                </span>카테고리
+                            </button>
+                            <div class="category_contents">
+                                <ul>
+                                    <li class="on"><a href="#">교원몰
+                                        <ul>
+                                            <li><a href="#">데스크탑</a></li>
+                                            <li><a href="#">정수기</a></li>
+                                            <li><a href="#">스탠드정수기</a></li>
+                                            <li><a href="#">공기청정기</a></li>
+                                            <li><a href="#">비데</a></li>
+                                            <li><a href="#">연수기</a></li>
+                                            <li><a href="#">안마의자</a></li>
+                                        </ul>
+                                    </a></li>
+                                    <li><a href="#">제휴용
+                                        <ul>
+                                            <li><a href="#">데스크탑2</a></li>
+                                            <li><a href="#">정수기2</a></li>
+                                            <li><a href="#">스탠드정수기2</a></li>
+                                            <li><a href="#">공기청정기2</a></li>
+                                            <li><a href="#">비데</a></li>
+                                            <li><a href="#">연수기</a></li>
+                                            <li><a href="#">안마의자</a></li>
+                                        </ul>
+                                    </a></li>
+                                    <li><a href="#">파트너몰
+                                        <ul>
+                                            <li><a href="#">데스크탑3</a></li>
+                                            <li><a href="#">정수기3</a></li>
+                                            <li><a href="#">스탠드정수기3</a></li>
+                                            <li><a href="#">공기청정기</a></li>
+                                            <li><a href="#">비데</a></li>
+                                            <li><a href="#">연수기</a></li>
+                                            <li><a href="#">안마의자</a></li>
+                                        </ul>
+                                    </a></li>
+                                    <li><a href="#">임직원몰
+                                        <ul>
+                                            <li><a href="#">데스크탑4</a></li>
+                                            <li><a href="#">정수기4</a></li>
+                                            <li><a href="#">스탠드정수기4</a></li>
+                                            <li><a href="#">공기청정기4</a></li>
+                                            <li><a href="#">비데4</a></li>
+                                            <li><a href="#">연수기</a></li>
+                                            <li><a href="#">안마의자</a></li>
+                                        </ul>
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <nav class="gnb_nav">
+                            <!-- MENU::JSTL -->
+                            <ul class="demo-menus" id="content_1depth">
+                                <li>
+                                    <a 
+                                        href="#"
+                                        target="_self">훈련과정</a>
+                                        <ul id="content_2depth">
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                        </ul>
+
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="#"
+                                        target="_self">고객센터</a>
+                                        <ul id="content_2depth">
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                        </ul>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="#"
+                                        target="_self">이벤트</a>
+                                        <ul id="content_2depth">
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                        </ul>
+                                </li>
+
+                            </ul>
+                            <!-- MENU::JSTL END -->
+                        </nav>
+                    </div>
+                </div>
+                <span class="gnb__arrow" aria-hidden="true"></span></div>
+
+        </header>
+        <main>
+            <div>
+                <h1>훈련과정 수강신청</h1>
+                <p><span class="hidden">기준선</span></p>
+                <ul>
+                    <li><span>1</span>정보입력</li>
+                    <li><span>2</span>수강신청 완료</li>
+                </ul>           
+            </div>
+            <form action="einsert" method="post">
+                <h2>수강신청 등록하기</h2>
+                <p class="import">필수항목입니다.</p>
+                <table>
+                    <tr height="40">
+                        <td>훈련기관</td>
+                        <td>명진디지털 직업전문학교</td>
+                    </tr>
+                    <tr height="40">
+                        <td>훈련과정</td>
+                        <td>컴퓨터기초실무(한글+엑셀+파워포인트)</td>
+                    </tr>
+                    <tr height="40">
+                        <td>훈련일</td>
+                        <td>2021-03-19 ~ 2021-04-22 (4회차)</td>
+                    </tr>
+                    <tr height="40">
+                        <td>특화과정</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+                <h2>수강신청 정보</h2>
+                <p class="import">필수항목입니다.</p>
+                <table>
+                    <tr height="40">
+                        <td>성명</td>
+                        <td><input type="text" name="membername" id="membername" readonly></td>
+                    </tr>
+                    <tr height="40">
+                        <td>생년월일</td>
+                        <td><input type="text" name="birth" id="birth" readonly></td>
+                    </tr>
+                    <tr height="40">
+                        <td>연락처</td>
+                        <td>
+                            <select name="phone" id="phonenom">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="017">017</option>
+                            </select> <span>-</span>
+                            <input type="text" name="tel" id="tel" required> <span>-</span>
+                            <input type="text" name="tel" id="tel" required>
+                        </td>
+                    </tr>
+                    <tr height="40">
+                        <td>이메일</td>
+                        <td>
+                            <input type="text" name="email" id="email" required> <span>@</span>
+                            <input type="text" name="email" id="email2" required>
+                            <select name="email" id="emailurl">
+                                <option value="직접입력">직접입력</option>
+                            </select>
+                        </td>
+                        
+                    </tr>
+                    <tr height="40">
+                        <td>최종학력</td>
+                        <td>
+                            <select name="grade" id="recommender">
+                                <option value="선택">선택</option>
+                            </select>
+                            <p>학력정보는 통계의 목적으로만 활용이 되며, 훈련기관을 포함한 외부의 제공되지 않습니다.</p>
+                        </td>
+                    </tr>
+                    <tr height="40">
+                        <td>고용형태</td>
+                        <td>
+                            <input type="radio" name="finaleducation" id="finaleducation">
+                            <label for="finaleducation">실업자</label>
+                            <input type="radio" name="finaleducation" id="employee">
+                            <label for="employee">근로자</label>
+                            <input type="radio" name="finaleducation" id="unpaid">
+                            <label for="unpaid">무급휴직자</label>
+                        </td>
+                    </tr>
+                </table>
+                <div class="Support">
+                    <h3>지원대상</h3>
+                    <div>
+                        
+                        <p>
+                            <input type="radio" name="targetofsupport" value="실업자">
+                            <label for="targetofsupport">실업자</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="targetofsupport" value="근로자">
+                            <label for="targetofsupport">근로자</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="targetofsupport" value="무급휴직자">
+                            <label for="targetofsupport">무급휴직자</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="targetofsupport" value="자영업자">
+                            <label for="targetofsupport">자영업자</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="targetofsupport" value="고보미가입근로자">
+                            <label for="targetofsupport">고보미가입근로자</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="targetofsupport" value="특수형태근로종사자">
+                            <label for="targetofsupport">특수형태근로종사자</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="targetofsupport" value="지방관서의 장이 인정하는 자">
+                            <label for="targetofsupport">지방관서의 장이 인정하는 자</label>
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="SupportCheck">
+                    <h2>신청자격 확인</h2>
+                    <div>
+                        <p>1. 신청일 현재 공무원 또는 사립학교 교직원으로 재직 중입니까?</p>
+                        <input type="radio" name="qualification1" value="false">
+                        <label for="">예</label>
+                        <input type="radio" name="qualification1" value="true">
+                        <label for="">아니오</label>
+                    </div>
+
+                    <div>
+                        <p>2. 「외국인근로자의 고용 등에 관한 법률」을 적용받는 외국인(E-9, H-2, F4, H2 등 임의적용자)입니까?</p>
+                        <input type="radio" name="qualification2" value="false">
+                        <label for="">예</label>
+                        <input type="radio" name="qualification2" value="true">
+                        <label for="">아니오</label>
+                    </div>
+
+                    <div>
+                        <p>3. 연 매출 1억 5천만원 이상인 자영업자(사업자등록증이 여러 개일경우 합산한 금액)입니까?</p>
+                        <input type="radio" name="qualification3" value="false">
+                        <label for="">예</label>
+                        <input type="radio" name="qualification3" value="true">
+                        <label for="">아니오</label>
+                    </div>
+
+                    <div>
+                        <p>4. 최근 연 4천8백만원 이상인 부동산 임대 공급자(합산)입니까?</p>
+                        <input type="radio" name="qualification4" value="false">
+                        <label for="">예</label>
+                        <input type="radio" name="qualification4" value="true">
+                        <label for="">아니오</label>
+                    </div>
+
+                    <div>
+                        <p>5. 월 평균임금(소득) 300만원 이상인 대규모기업근로자(만 45세 미만)· 특수형태근로종사자입니까?</p>
+                        <input type="radio" name="qualification5" value="false">
+                        <label for="">예</label>
+                        <input type="radio" name="qualification5" value="true">
+                        <label for="">아니오</label>
+                    </div>
+
+                    <div>
+                        <p>6. 「국민기초생활보장법」 제9조에 따라 생계급여를 수급받는 일반수급자입니까?</p>
+                        <input type="radio" name="qualification6" value="false">
+                        <label for="">예</label>
+                        <input type="radio" name="qualification6" value="true">
+                        <label for="">아니오</label>
+                    </div>
+
+                    <div>
+                        <p>7. 국민내일배움카드 부정행위에 따른 훈련 수강 또는 지원·융자 제한기간 중에 있거나, 지원금 등의 반환명령을 받고 그 납부의 의무를 이행하지
+                        않은 사실이 있습니까?</p>
+                        <input type="radio" name="qualification7" value="false">
+                        <label for="">예</label>
+                        <input type="radio" name="qualification7" value="true">
+                        <label for="">아니오</label>
+                    </div>
+
+                    <div>
+                        <p>8. 정부(지방자치단체포함)로부터 훈련비 등을 지원받는 훈련과정 수강하고 있거나 수강할 계획이 있습니까?</p>
+                        
+                        <input type="radio" name="qualification8" value="false" onclick="show();">
+                        <label for="">예</label> 
+                        <input type="radio" name="qualification8" value="true" onclick="hide();">
+                        <label for="">아니오</label> 
+                        <div id="show" style="display: none">
+                            <table>
+                                <tr>
+                                    <td>- 훈련명</td>
+                                    <td><input type="text" name="qualification8"></td>
+                                </tr>
+                                <tr>
+                                    <td>- 참여기간</td>
+                                    <td><input type="text" name="qualification8" id="startdate"> - <input type="text" name="qualification8" id="enddate"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>9. 최종학년 졸업예정자 아닌 재학생입니까?</p>
+                        <input type="radio" name="qualification9" value="false">
+                        <label for="">예</label>
+                        <input type="radio" name="qualification9" value="true">
+                        <label for="">아니오</label>
+                    </div>
+                </div>
+                <p class="caution">※ 본인은 위와같이 신청자격 관련사항을 확인하였으며, 위의 내용에 거짓이 있을 경우에는 <em>직업능력 개발계좌의 발급이 취소되고, 수강 또는 지원·융자의 제한, 지원받은 훈련비용의 반환 및 추가징수 등의 행정처분</em>을 받을 수 있다는 것을 모두 이해하였습니다. </p>
+                <p class="checkBox">
+                    <input type="checkbox" name="check" id="check">
+                    <label for="check">확인</label>
+                </p>
+                <section>
+                    <h2>제 3자 제공에 대한 안내</h2>
+                    <p>직업능력개발 훈련을 참여하고자 온라인 수강신청을 하는 경우 훈련생에 대한 수강관리를 위하여 아래와 같이 개인정보를 훈련기관에 제공합니다.</p>
+                    <table>
+                        <tr>
+                            <th>제공받는자</th>
+                            <th>이용목적</th>
+                            <th>개인정보 항목</th>
+                            <th>보유·이용기간</th>
+                        </tr>
+                        <tr>
+                            <td>훈련기관</td>
+                            <td>온라인 수강신청</td>
+                            <td>연락처, 생년월일, 이메일, 고용형태</td>
+                            <td>훈련 시작일로 부터 3개월</td>
+                        </tr>
+                    </table>
+                </section>
+                <input type="submit" value="수강신청">
+            </form>
+        </main>
+        <footer>
+            <div>
+                <h1><a href="home"><img src="resources/common/imgs/logo_01.png" alt="로고"></a></h1>
+                <div>
+                    <ul>
+                        <li class="hidden">하단 유틸메뉴</li>
+                        <li>이용약관</li>
+                        <li>개인정보 처리방침</li>
+                        <li>이메일주소 무단수집거부</li>
+                        <li>제휴문의</li>
+                    </ul>
+                    <address class="hidden">
+                        <p>(주) 아이이에이 서울특별시 송파구 법원로 128 A-1612 <span>고객센터:02 - 6269 - 0631</span></p>
+                        <p>Copyright ⓒ2020 IEA. All rights reserved.</p>
+                    </address>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
